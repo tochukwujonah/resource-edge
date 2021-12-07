@@ -1,1 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Color constants */
+:root {
+    --primary-blue: #0052CC;
+    --secondary-blue: #008DA6;
+    --dull-blue: #42526E;
+    --orange: #FF8B00;
+    --purple: #5243AA;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter";
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--primary-blue);
+    font-weight: 900;
+    font-size: 20px;
+}
