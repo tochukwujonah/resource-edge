@@ -2,12 +2,11 @@ import React from 'react'
 
 const Header = ()=> {
     return (
-        <div className="header">
+        <header className="header">
             <div className="container">
-                
+                <span className="logo">resource edge</span>
             </div>
-            
-        </div>
+        </header>
     )
 }
 
