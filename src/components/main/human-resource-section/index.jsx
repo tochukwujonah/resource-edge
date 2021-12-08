@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HumanResource = ()=> {
+const HumanResourceSectionComponent = ()=> {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const HumanResource = ()=> {
     )
 }
 
-export default HumanResource;
+export default HumanResourceSectionComponent;
