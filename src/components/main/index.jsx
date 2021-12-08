@@ -1,10 +1,13 @@
 import React from 'react'
+import HumanResourceSectionComponent from './human-resource-section'
 
 const Main = ()=> {
     return (
-        <div>
+        <main className="main-component">
+            <HumanResourceSectionComponent />
+
             
-        </div>
+        </main>
     )
 }
 
