@@ -9,4 +9,13 @@ export const Caption = (props)=> {
     )
 }
 
+export const Card = (props)=> {
+    return (
+        <div className="card">
+            <h1>{props.title}</h1>
+            <small>{props.body}</small>
+        </div>
+    )
+}
+
 
