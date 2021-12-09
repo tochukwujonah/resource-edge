@@ -207,12 +207,19 @@ a {
 /* Bell icon */
 .right > img:first-child {
     margin: 0 20px;
+    cursor: pointer;
 }
 
 
 /* Avatar */
 .right > img:last-child {
     width: 30px;
+    cursor: pointer;
+}
+
+.iframe header h3 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
