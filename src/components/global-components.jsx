@@ -21,12 +21,20 @@ export const Card = ({ icon, color, title, body, hasShadow=true })=> {
     )
 }
 
-export const EmployeeCard = ({ icon, name,  })=> {
+export const EmployeeCard = ({ icon, name, hasNeutrals })=> {
     return (
         <div className="emp-card-container">
             <div className="employee-card">
                 <img src={ icon } />
                 <span> { name } </span>
+                {
+                    hasNeutrals ?
+                        <div className="neural-bar-lg-group">
+                            <span className="neutral-bar-lg"></span>
+                            <span className="neutral-bar-lg"></span>
+                        </div>
+                    : null
+                }
             </div>
         </div>
     )
