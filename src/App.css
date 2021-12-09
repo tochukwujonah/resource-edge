@@ -157,12 +157,18 @@ a {
     box-sizing: 0px 1.22222px 3.66667px rgba(193, 199, 208, 0.4);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.iframe header left {
+.iframe header .left {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.hamburger-menu {
+    cursor: pointer;
 }
 
 
@@ -175,6 +181,38 @@ a {
 
 .hamburger-menu span:nth-child(odd) {
     margin: 2px 0;
+}
+
+.iframe .logo {
+
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0052CC;
+    margin: 0 20px;
+}
+
+.iframe .logo img {
+    width: 60%;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bell icon */
+.right > img:first-child {
+    margin: 0 20px;
+}
+
+
+/* Avatar */
+.right > img:last-child {
+    width: 30px;
 }
 
 
