@@ -5,6 +5,17 @@ import calender from '../../../assets/icons/calender.svg'
 import goal from '../../../assets/icons/goal.svg'
 import IframeComponent from '../../iframe-component'
 
+
+import search from '../../../assets/icons/search.png'
+
+import { EmployeeCard } from '../../global-components'
+
+import Sizwe from '../../../assets/images/staffs/Sizwe.png'
+import Ebele from '../../../assets/images/staffs/Ebele.png'
+import Banigo from '../../../assets/images/staffs/Banigo.png'
+import Abongile from '../../../assets/images/staffs/Abongile.png'
+
+
 const HumanResourceSectionComponent = ()=> {
     return (
         <section className="main-component-item hr-section">
@@ -22,13 +33,46 @@ const HumanResourceSectionComponent = ()=> {
                 </div>
 
                 {/* My iframe component for employee directory goes here */}
-                <IframeComponent />
+                <IframeComponent title="Employee Directory" IframeBody={employeeDirectoryIframe} />
                 
             </div>
 
             
         </section>
     )
+}
+
+
+
+const employeeDirectoryIframe = ()=> {
+    return (
+        <>
+            <span className="neutral-bar"></span>
+                <h3>Employees</h3>
+
+                <div className="search-section">
+                    <form>
+                        <input placeholder="search" />
+                    </form>
+                    <img src={search} />
+                </div>
+
+                <div className="neutral-bars">
+                    <span className="neutral-bar"></span>
+                    <span className="neutral-bar"></span>
+                    <span className="neutral-bar"></span>
+                    <span className="neutral-bar"></span>
+                    </div>
+
+
+                <div className="employees">
+                    <EmployeeCard icon={Sizwe} name="Sizwe Bansi" />
+                    <EmployeeCard icon={Ebele} name="Ebele Rewane" />
+                    <EmployeeCard icon={Banigo} name="Banigo Selema" />
+                    <EmployeeCard icon={Abongile} name="Abongile Amba" />
+                </div>
+        </>
+    );
 }
 
 export default HumanResourceSectionComponent;
