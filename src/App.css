@@ -165,11 +165,16 @@ a {
     justify-content: space-between;
 }
 
+
 .hamburger-menu span {
     display: block;
-    width: 20px;
-    height: 4.6px;
+    width: 15px;
+    height: 2.6px;
     background-color: #222;
+}
+
+.hamburger-menu span:nth-child(odd) {
+    margin: 2px 0;
 }
 
 
