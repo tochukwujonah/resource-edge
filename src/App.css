@@ -222,6 +222,50 @@ a {
     font-weight: 500;
 }
 
+/* main iframe section */
+
+.iframe-main-section {
+    margin-top: 52px;
+}
+
+.neutral-bars {
+    width: calc(59px * 4);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 7.38px;
+}
+
+.neutral-bars > .neutral-bar {
+    width: 59px;
+    height: 6px;
+}
+
+.neutral-bar {
+    display: block;
+    border-radius: 50px;
+    width: 142px;
+    height: 5.89px;
+    background-color: #F4F5F7;
+    margin: 8.92px 0;
+}
+
+.search-section {
+    width: 312px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-right: 9.53px;
+    border: 0.87px solid #DFE1E6;
+
+}
+
+.search-section input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
 
 /* Global components */
 
