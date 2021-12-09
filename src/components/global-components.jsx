@@ -21,10 +21,12 @@ export const Card = ({ icon, color, title, body, hasShadow=true })=> {
     )
 }
 
-export const EmployeeCard = ()=> {
+export const EmployeeCard = ({ icon, name,  })=> {
     return (
         <div className="employee-card">
-            
+            <img src={ icon } />
+            <span> { name } </span>
+
         </div>
     )
 }
