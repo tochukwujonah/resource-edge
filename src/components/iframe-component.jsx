@@ -2,16 +2,11 @@ import React from 'react'
 import logo from '../assets/images/logo.png'
 import notification from '../assets/icons/notification.svg'
 import avatar from '../assets/images/staffs/right-content.png'
-import search from '../assets/icons/search.png'
 
-import { EmployeeCard } from './global-components'
 
-import Sizwe from '../assets/images/staffs/Sizwe.png'
-import Ebele from '../assets/images/staffs/Ebele.png'
-import Banigo from '../assets/images/staffs/Banigo.png'
-import Abongile from '../assets/images/staffs/Abongile.png'
 
-const IframeComponent = ()=> {
+
+const IframeComponent = ({ title, IframeBody })=> {
     return (
         <div className="iframe">
             <header>
@@ -26,7 +21,7 @@ const IframeComponent = ()=> {
                         <img src={logo} />
                     </div>
                     
-                    <h3>Employee Directory</h3>
+                    <h3> { title } </h3>
                 </div>
 
                 <div className="right">
@@ -37,32 +32,7 @@ const IframeComponent = ()=> {
 
             <main className="iframe-main-section">
                 <div className="container">
-                    <span className="neutral-bar"></span>
-                    <h3>Employees</h3>
-
-                    <div className="search-section">
-                        <form>
-                            <input placeholder="search" />
-                        </form>
-                        <img src={search} />
-                    </div>
-
-                    <div className="neutral-bars">
-                        <span className="neutral-bar"></span>
-                        <span className="neutral-bar"></span>
-                        <span className="neutral-bar"></span>
-                        <span className="neutral-bar"></span>
-                        </div>
-
-
-                    <div className="employees">
-                        <EmployeeCard icon={Sizwe} name="Sizwe Bansi" />
-                        <EmployeeCard icon={Ebele} name="Ebele Rewane" />
-                        <EmployeeCard icon={Banigo} name="Banigo Selema" />
-                        <EmployeeCard icon={Abongile} name="Abongile Amba" />
-                    </div>
-
-
+                    <IframeBody />
                 </div>
 
 
