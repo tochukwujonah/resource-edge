@@ -19,11 +19,11 @@ const LogisticsSectionComponent = ()=> {
                     <Card icon={sent} color="#FF8B00" title="Travel & Logistics" body="Make travel requests, get approvals, and have access to travel information.
                     " hasShadow={false} />
 
-                    <Card icon={briefcase} color="#008DA6" title="Asset Management" body="Manage the acquisition, assignment, and disposition of assets seamlessly.
-                    " hasShadow={false} />
+                    <Card icon={ briefcase } color="#008DA6" title="Asset Management" body="Manage the acquisition, assignment, and disposition of assets seamlessly.
+                    " hasShadow={ false } />
                 </div>
 
-                <IframeComponent title="Travel & Logistics" IframeBody={travelLogisticsIframe} />
+                <IframeComponent title="Travel & Logistics" IframeBody={ travelLogisticsIframe } />
             </div>
             
         </div>
@@ -34,14 +34,30 @@ const LogisticsSectionComponent = ()=> {
 
 const travelLogisticsIframe = ()=> {
     return (
-        <div className="disp-flex">
-            <aside>
 
-                <EmployeeCard icon={ Sizwe } name="Sizwe Bansi" />
+        <>
 
-            </aside>
-            <main></main>
-        </div>
+            <h3>Travel Request</h3>
+            <div className="disp-flex">
+                <aside>
+                    <EmployeeCard icon={ Sizwe } name="Sizwe Bansi" hasNeutrals />
+
+                </aside>
+                <main>
+
+                    <div className="header">
+                        <h3>Travel Details</h3>
+                    </div>
+
+                    <div className="content">
+
+                    </div>
+
+
+                </main>
+            </div>
+        
+        </>
     );
 }
 
