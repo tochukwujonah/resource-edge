@@ -7,6 +7,7 @@ import search from '../assets/icons/search.png'
 import { EmployeeCard } from './global-components'
 
 import Sizwe from '../assets/images/staffs/Sizwe.png'
+import Ebele from '../assets/images/staffs/Ebele.png'
 
 const IframeComponent = ()=> {
     return (
@@ -54,6 +55,9 @@ const IframeComponent = ()=> {
 
                     <div className="employees">
                         <EmployeeCard icon={Sizwe} name="Sizwe Bansi" />
+                        <EmployeeCard icon={Ebele} name="Ebele Rewane" />
+                        <EmployeeCard icon={Sizwe} name="Banigo Selema" />
+                        <EmployeeCard icon={Sizwe} name="Abongile Amba" />
                     </div>
 
 
