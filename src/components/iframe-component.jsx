@@ -57,7 +57,7 @@ const IframeComponent = ()=> {
                         <EmployeeCard icon={Sizwe} name="Sizwe Bansi" />
                         <EmployeeCard icon={Ebele} name="Ebele Rewane" />
                         <EmployeeCard icon={Banigo} name="Banigo Selema" />
-                        <EmployeeCard icon={Sizwe} name="Abongile Amba" />
+                        <EmployeeCard icon={Abongile} name="Abongile Amba" />
                     </div>
 
 
