@@ -45,7 +45,7 @@ const travelLogisticsIframe = ()=> {
                 </aside>
                 <main>
 
-                    <div className="header">
+                    <div className="head-section">
                         <h3>Travel Details</h3>
                     </div>
 
