@@ -50,7 +50,25 @@ const travelLogisticsIframe = ()=> {
                     </div>
 
                     <div className="content">
-
+                        <div>
+                            <h5>Departure Date</h5>
+                            <p>September 25, 2021</p>
+                        </div>
+                        <div>
+                            <h5>Return Date</h5>
+                            <p>October 7, 2021</p>
+                        </div>
+                        <div>
+                            <h5>Travel Type</h5>
+                            <p>Business</p>
+                        </div>
+                        <div>
+                            <h5>Destination</h5>
+                            <p>Lagos, Nigeria.</p>
+                        </div>
+                        <br />
+                        <hr />
+                        <h5>More information</h5>
                     </div>
 
 
