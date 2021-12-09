@@ -2,9 +2,11 @@ import React from 'react'
 import logo from '../assets/images/logo.png'
 import notification from '../assets/icons/notification.svg'
 import avatar from '../assets/images/staffs/right-content.png'
-import search from '../assets/icons/search.png';
+import search from '../assets/icons/search.png'
 
-import { EmployeeCard } from './global-components';
+import { EmployeeCard } from './global-components'
+
+import Sizwe from '../assets/images/staffs/Sizwe.png'
 
 const IframeComponent = ()=> {
     return (
@@ -51,7 +53,7 @@ const IframeComponent = ()=> {
 
 
                     <div className="employees">
-                        <EmployeeCard />
+                        <EmployeeCard icon={Sizwe} name="Sizwe Bansi" />
                     </div>
 
 
