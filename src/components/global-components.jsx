@@ -9,10 +9,10 @@ export const Caption = ({ title, body })=> {
     )
 }
 
-export const Card = ({ icon, color, title, body })=> {
+export const Card = ({ icon, color, title, body, hasShadow })=> {
     return (
-        <div className="card">
-            <div className="icon"><img src={icon} /></div>
+        <div className={hasShadow ? "card shadow" : "card"}>
+            <div className="icon" style={{backgroundColor: color}}><img src={icon} /></div>
             <>
                 <h1>{ title }</h1>
                 <small>{ body }</small>
