@@ -4,6 +4,8 @@ import notification from '../assets/icons/notification.svg'
 import avatar from '../assets/images/staffs/right-content.png'
 import search from '../assets/icons/search.png';
 
+import { EmployeeCard } from './global-components';
+
 const IframeComponent = ()=> {
     return (
         <div className="iframe">
@@ -46,6 +48,13 @@ const IframeComponent = ()=> {
                         <span className="neutral-bar"></span>
                         <span className="neutral-bar"></span>
                         </div>
+
+
+                    <div className="employees">
+                        <EmployeeCard />
+                    </div>
+
+
                 </div>
 
 
