@@ -39,6 +39,13 @@ const IframeComponent = ()=> {
                         </form>
                         <img src={search} />
                     </div>
+
+                    <div className="neutral-bars">
+                        <span className="neutral-bar"></span>
+                        <span className="neutral-bar"></span>
+                        <span className="neutral-bar"></span>
+                        <span className="neutral-bar"></span>
+                        </div>
                 </div>
 
 
