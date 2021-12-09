@@ -8,6 +8,8 @@ import { EmployeeCard } from './global-components'
 
 import Sizwe from '../assets/images/staffs/Sizwe.png'
 import Ebele from '../assets/images/staffs/Ebele.png'
+import Banigo from '../assets/images/staffs/Banigo.png'
+import Abongile from '../assets/images/staffs/Abongile.png'
 
 const IframeComponent = ()=> {
     return (
