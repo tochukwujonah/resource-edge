@@ -1,8 +1,13 @@
 import React from 'react'
-import { Caption, Card } from '../../global-components'
+import { Caption, Card, EmployeeCard } from '../../global-components'
 
 import sent from '../../../assets/icons/sent.svg'
 import briefcase from '../../../assets/icons/briefcase.svg'
+
+
+import Sizwe from '../../../assets/images/staffs/Sizwe.png'
+
+import IframeComponent from '../../iframe-component'
 
 const LogisticsSectionComponent = ()=> {
     return (
@@ -17,10 +22,27 @@ const LogisticsSectionComponent = ()=> {
                     <Card icon={briefcase} color="#008DA6" title="Asset Management" body="Manage the acquisition, assignment, and disposition of assets seamlessly.
                     " hasShadow={false} />
                 </div>
+
+                <IframeComponent title="Travel & Logistics" IframeBody={travelLogisticsIframe} />
             </div>
             
         </div>
     )
+}
+
+
+
+const travelLogisticsIframe = ()=> {
+    return (
+        <div className="disp-flex">
+            <aside>
+
+                <EmployeeCard icon={ Sizwe } name="Sizwe Bansi" />
+
+            </aside>
+            <main></main>
+        </div>
+    );
 }
 
 export default LogisticsSectionComponent;
