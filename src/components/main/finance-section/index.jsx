@@ -22,7 +22,7 @@ const FinanceSectionComponent = ()=> {
                     " hasShadow={ false } />
                 </div>
 
-                <IframeComponent title="Travel & Logistics" IframeBody={ financeIframe } />
+                <IframeComponent title="Payroll" IframeBody={ financeIframe } />
 
             </div>
         </div>
@@ -31,7 +31,13 @@ const FinanceSectionComponent = ()=> {
 
 export const financeIframe = ()=> {
     return (
-        <h1>Jesus is Lord</h1>
+        <div>
+            <span className="neutral-bar"></span>
+            <h3>January Payroll</h3>
+            <div className="employees-table">
+                
+            </div>
+        </div>
     );
 }
 
