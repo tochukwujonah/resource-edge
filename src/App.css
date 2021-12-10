@@ -142,6 +142,7 @@ a {
 }
 
 .main-component-item {
+    position: relative;
     padding: 80px 0;
 }
 
@@ -514,7 +515,7 @@ footer .right {
 }
 
 .card h1 {
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
 }
 
@@ -554,7 +555,10 @@ footer .right {
     justify-content: center;
     transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
 
+}
 
+.employee-card .neutral-bar {
+    height: 11px;
 }
 
 .employee-card span {
@@ -599,4 +603,15 @@ footer .right {
     border: 2px solid #222;
     border-radius: 50%;
     position: absolute;
+}
+
+.design {
+    position: absolute;
+    height: 680.9716680331661px;
+    width: 143.0612615896967px;
+    left: 167.1317138671875px;
+    top: 2989.3204345703125px;
+    border-radius: 157.5px;
+    background: #6DB8FF0A;
+    
 }
