@@ -48,13 +48,27 @@ const AuthPage = ()=> {
                 <h2>Login</h2>
                 <span>Access your resource edge account</span>
 
+                <div className="email-name-edit">
+                    <p>
+                        <h2>Ositadinma Nwangwu</h2>
+                        <sm>o.nwangwu@genesystechhub.com</sm>
+                    </p>
+                </div>
+
                 {/* My form */}
                 <form className="form-control">
                     <div className="input-group">
                         <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"}>
                             <label>Email Address</label>
-                            <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput}/>
+                            <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput} autoFocus autoCorrect={true}/>
                         </div>
+
+
+                        <div className={progress === 1 ? "form-item initial-comein" :  "form-item forward"}>
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter password" value={user.password} onChange={validateInput}/>
+                        </div>
+
                     </div>
                     <div className="form-item">
                         <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={nextStep}>Next</button>
