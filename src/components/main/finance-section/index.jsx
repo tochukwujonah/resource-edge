@@ -25,10 +25,10 @@ const FinanceSectionComponent = ()=> {
     return (
         <div className="main-component-item finance-section">
             {/* Design */}
-            <div className="design design-left"></div>
-            <div className="design design-right"></div>
+            <div className="design design-left finance-design-left"></div>
+            <div className="design design-right finance-design-right"></div>
 
-            
+
             <div className="container">
             <div className="top">
                     <Caption title="Finance" body="Generate invoices, track expenditure, and manage complex payrolls for multiple teams and companies"/>
@@ -56,6 +56,7 @@ export const financeIframe = ()=> {
                 <div className="table-header">Employees</div>
                 <ul>
                     <li className="t-headers">
+                        <span><input type="checkbox" /></span>
                         <span>SN</span>
                         <span>Full Name</span>
                         <span>Role</span>
@@ -65,6 +66,7 @@ export const financeIframe = ()=> {
                     {
                         employees.map((emp, idx) =>(
                             <li key={ idx } className="row">
+                                <span><input type="checkbox" /></span>
                                 <span>GO{ idx+1 }</span>
                                 <span><img src={ emp.avatar } />{ emp.name }</span>
                                 <span>{ emp.role }</span>
