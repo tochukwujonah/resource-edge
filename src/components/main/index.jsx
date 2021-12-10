@@ -11,6 +11,10 @@ const Main = ()=> {
             <LogisticsSectionComponent />
             <FinanceSectionComponent />
             <PartnersSectionComponent />
+
+            <footer>
+                
+            </footer>
             
         </main>
     )
