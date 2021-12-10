@@ -16,6 +16,19 @@ const AuthPage = ()=> {
             <img src={logo} alt="Logo" />
             
             <div className="box">
+                <h2>Login</h2>
+                <span>Access your resource edge account</span>
+
+                {/* My form */}
+                <form>
+                    <div className="form-item">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter email" />
+                    </div>
+                    <div className="form-item">
+                        <button className="btn">Next</button>
+                    </div>
+                </form>
 
             </div>
             
