@@ -5,6 +5,8 @@ import pay from '../../../assets/icons/pay.svg'
 
 import { Caption, Card } from '../../global-components'
 
+import IframeComponent from '../../iframe-component'
+
 
 const FinanceSectionComponent = ()=> {
     return (
