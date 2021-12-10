@@ -2,6 +2,7 @@ import React from 'react'
 import HumanResourceSectionComponent from './human-resource-section'
 import LogisticsSectionComponent from './logistics-section'
 import FinanceSectionComponent from './finance-section'
+import PartnersSectionComponent from './partners-section'
 
 const Main = ()=> {
     return (
@@ -9,6 +10,7 @@ const Main = ()=> {
             <HumanResourceSectionComponent />
             <LogisticsSectionComponent />
             <FinanceSectionComponent />
+            <PartnersSectionComponent />
             
         </main>
     )
