@@ -21,14 +21,14 @@ export const Card = ({ icon, color, title, body, hasShadow=true })=> {
     )
 }
 
-export const EmployeeCard = ({ icon, name, neutrals = 1 })=> {
+export const EmployeeCard = ({ icon, name, neutrals = "mono" })=> {
     return (
         <div className="emp-card-container">
             <div className="employee-card">
                 <img src={ icon } />
-                <span style={ neutrals === 2 ? {fontSize: "10.48px"} : null}> { name } </span>
+                <span style={ neutrals === "bi" ? {fontSize: "10.48px"} : null}> { name } </span>
                 {
-                    neutrals === 2 ?
+                    neutrals === "bi" ?
                         <div className="neural-bar-lg-group">
                             <span className="neutral-bar-lg"></span>
                             <span className="neutral-bar-lg"></span>
