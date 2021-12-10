@@ -408,13 +408,27 @@ a {
 
 }
 
+.employees-table ul li {
+    display: flex;
+    align-items: center;
+    padding:15px 20.87px;
+}
+
 .employees-table ul li span {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     width: 128.98px;
 }
 
-.employees-table ul li {
-    padding:17px 20.87px;
+.employees-table ul li:nth-of-type(3) {
+    box-shadow: 0px 10px 18px 0px #091E4214,
+                0px -0.7699999809265137px 1px 0px #DDDDDD inset;
+
+}
+
+.employees-table ul li span img {
+    width: 27.9px;
+    margin-right: 10px;
 }
 
 .employees-table ul li:not(:last-child) {
