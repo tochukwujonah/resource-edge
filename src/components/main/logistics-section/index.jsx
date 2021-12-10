@@ -4,6 +4,9 @@ import { Caption, Card, EmployeeCard } from '../../global-components'
 import sent from '../../../assets/icons/sent.svg'
 import briefcase from '../../../assets/icons/briefcase.svg'
 
+import plane from '../../../assets/icons/plane.svg'
+import bed from '../../../assets/icons/bed.svg'
+
 
 import Sizwe from '../../../assets/images/staffs/Sizwe.png'
 
@@ -69,6 +72,26 @@ const travelLogisticsIframe = ()=> {
                         <br />
                         <hr />
                         <h5>More information</h5>
+
+                        <div className="more-info">
+                            <div className="left-info">
+                                <span style={{"--w":"1"}}></span>
+                                <span style={{"--w":".8"}}></span>
+                                <span style={{"--w":".6"}}></span>
+                                <span style={{"--w":".4"}}></span>
+                            </div>
+                            <div className="right-info">
+                                <div>
+                                    <img src={ plane } />
+                                    <span></span>
+                                </div>
+
+                                <div>
+                                    <img src={ bed } />
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
