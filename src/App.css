@@ -42,6 +42,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
+    overflow-x: hidden;
     font-family: "Nunito";
 }
 
@@ -464,7 +465,13 @@ a {
     height: 60px;
 }
 
-
+/* Footer section */
+footer {
+    background-color: #091E42;
+    height: 224px;
+    width: 1440px;
+    margin-top: 291.5px;
+}
 
 
 /* Global components */
