@@ -26,7 +26,10 @@ const AuthPage = ()=> {
     }
 
 
-    const nextStep = ()=> setProgress(1);
+    const nextStep = (e)=> {
+        e.preventDefault();
+        setProgress(1);
+    }
 
     const backStep = ()=> setProgress(-1);
 
@@ -47,9 +50,11 @@ const AuthPage = ()=> {
 
                 {/* My form */}
                 <form className="form-control">
-                    <div className={progress === 1 ? "form-item backward" : "form-item forward"}>
-                        <label>Email Address</label>
-                        <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput}/>
+                    <div className="input-group">
+                        <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"}>
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput}/>
+                        </div>
                     </div>
                     <div className="form-item">
                         <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={nextStep}>Next</button>
