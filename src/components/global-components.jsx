@@ -30,6 +30,7 @@ export const EmployeeCard = ({ icon, name, neutrals = "mono" })=> {
                 {
                     neutrals === "bi" ?
                         <div className="neural-bar-lg-group">
+                            <br />
                             <span className="neutral-bar-lg"></span>
                             <span className="neutral-bar-lg"></span>
                         </div>
