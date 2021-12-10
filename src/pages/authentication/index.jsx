@@ -1,15 +1,22 @@
 import React, { useState } from 'react'
-import Loginman from '../../assets/illustration/Loginman.png';
-import LogManWoman from '../../assets/illustration/LogManWoman.png';
-import logo from '../../assets/images/text_logo.png';
+
 
 import pencil from '../../assets/icons/pencil.png';
 import show from '../../assets/icons/show.png';
 import hide from '../../assets/icons/hide.png';
+import Page from '../Page';
 
 const AuthPage = ()=> {
 
+    return (
 
+        <Page ChildComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" />
+       
+    )
+}
+
+
+const ChildComponent = ()=> {
     const [user, setUser] = useState({email: '', password: ''});
     const [isValid, setIsValid] = useState(false);
     const [progress, setProgress] = useState(0); //Monitors progress, 1 is forward, -1 is backward 
@@ -42,23 +49,10 @@ const AuthPage = ()=> {
     const togglePassword = ()=> setShowpassword(!showPassword);
 
     return (
-        <div className="page">
+        <>
+            {/* If current field is password  field*/}
 
-            <div className="page-illustration">
-                <img src={Loginman} style={{"--shift": "-200"}} />
-                <img src={LogManWoman} style={{"--shift": "200"}} />
-            </div>
-
-            {/* My logo */}
-            <img src={logo} alt="Logo" />
-            
-            <div className="box">
-                <h2>Login</h2>
-                <span>Access your resource edge account</span>
-
-                {/* If current field is password  field*/}
-
-                {
+            {
                     progress === 1
                     ?
 
@@ -100,11 +94,8 @@ const AuthPage = ()=> {
 
                 <hr/>
 
-                <a href="#">Forgot password?</a>
-
-            </div>
-            
-        </div>
+               
+        </>
     )
 }
 
