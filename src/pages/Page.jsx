@@ -4,7 +4,7 @@ import Loginman from '../assets/illustration/Loginman.png';
 import LogManWoman from '../assets/illustration/LogManWoman.png';
 import logo from '../assets/images/text_logo.png';
 
-const Page = ({ title, caption, link, action=null, ChildComponent=null })=> {
+const Page = ({ title, caption, link, action=null, childComponent=null })=> {
     return (
         <div className="page">
 
@@ -21,7 +21,7 @@ const Page = ({ title, caption, link, action=null, ChildComponent=null })=> {
             <span>{ caption }</span>
 
             {
-                ChildComponent ? <ChildComponent /> : null
+                childComponent ? <childComponent /> : null
             }
 
         <a href="#" onClick={action}>{link}</a>
