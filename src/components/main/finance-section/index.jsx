@@ -13,10 +13,10 @@ import Banigo from '../../../assets/images/staffs/Banigo.png'
 import Abongile from '../../../assets/images/staffs/Abongile.png'
 
 const employees = [
-    {icon: Sizwe, name: "Sizwe Bansi", role: "CEO", earning: "50, 000", status: "Sent"},
-    {icon: Ebele, name: "Ebele Rewani", role: "Director", earning: "45, 000", status: "Pending"},
-    {icon: Banigo, name: "Banigo Selema", role: "Marketer", earning: "40, 000", status: "Pending"},
-    {icon: Abongile, name: "Abongile Amba", role: "Sales", earning: "30, 000", status: "Sent"}
+    {avatar: Sizwe, name: "Sizwe Bansi", role: "CEO", earning: "50, 000", status: "Sent"},
+    {avatar: Ebele, name: "Ebele Rewani", role: "Director", earning: "45, 000", status: "Pending"},
+    {avatar: Banigo, name: "Banigo Selema", role: "Marketer", earning: "40, 000", status: "Pending"},
+    {avatar: Abongile, name: "Abongile Amba", role: "Sales", earning: "30, 000", status: "Sent"}
 ];
 
 
@@ -61,7 +61,7 @@ export const financeIframe = ()=> {
                         employees.map((emp, idx) =>(
                             <li key={ idx } className="row">
                                 <span>GO{ idx+1 }</span>
-                                <span>{ emp.name }</span>
+                                <span><img src={ emp.avatar } />{ emp.name }</span>
                                 <span>{ emp.role }</span>
                                 <span>{ emp.earning }</span>
                                 <span>{ emp.status }</span>
