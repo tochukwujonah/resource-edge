@@ -21,19 +21,23 @@ export const Card = ({ icon, color, title, body, hasShadow=true })=> {
     )
 }
 
-export const EmployeeCard = ({ icon, name, hasNeutrals })=> {
+export const EmployeeCard = ({ icon, name, neutrals = 1 })=> {
     return (
         <div className="emp-card-container">
             <div className="employee-card">
                 <img src={ icon } />
-                <span style={ hasNeutrals ? {fontSize: "10.48px"} : null}> { name } </span>
+                <span style={ neutrals === 2 ? {fontSize: "10.48px"} : null}> { name } </span>
                 {
-                    hasNeutrals ?
+                    neutrals === 2 ?
                         <div className="neural-bar-lg-group">
                             <span className="neutral-bar-lg"></span>
                             <span className="neutral-bar-lg"></span>
                         </div>
-                    : null
+                    : 
+                    <>
+                        <br />
+                        <span className="neutral-bar"></span>
+                    </>
                 }
             </div>
         </div>
