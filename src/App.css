@@ -453,6 +453,18 @@ a {
 }
 
 
+/* Partners section */
+.partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.partners img {
+    height: 60px;
+}
+
+
 
 
 /* Global components */
