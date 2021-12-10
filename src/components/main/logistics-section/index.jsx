@@ -15,6 +15,9 @@ import IframeComponent from '../../iframe-component'
 const LogisticsSectionComponent = ()=> {
     return (
         <div className="main-component-item logistics-section">
+            {/* Design */}
+            <div className=" design design-left"></div>
+
             <div className="container">
                 <div className="top">
                     <Caption title="Admin & Logistics" body="Manage and track company assets as well as logistics for travelling employees"/>
