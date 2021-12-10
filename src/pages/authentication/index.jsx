@@ -13,6 +13,7 @@ const AuthPage = ()=> {
     const [user, setUser] = useState({email: '', password: ''});
     const [isValid, setIsValid] = useState(false);
     const [progress, setProgress] = useState(0); //Monitors progress, 1 is forward, -1 is backward 
+    const [showPassword, setShowpassword] = useState(false);
 
     const validateInput = (e)=> {
         if(e.target.type === 'email'){
@@ -36,6 +37,9 @@ const AuthPage = ()=> {
     }
 
     const backStep = ()=> setProgress(-1);
+
+    //Toggle password anonimity
+    const togglePassword = ()=> setShowpassword(!showPassword);
 
     return (
         <div className="page">
@@ -74,15 +78,17 @@ const AuthPage = ()=> {
                     <div className="input-group">
                         <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"} style={{"--fromX":"-100%", "--toX": "0%", "--opacityFrom": "0", "--opacityTo": "1"}}>
                             <label>Email Address</label>
-                            <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput} autoFocus autoCorrect={true}/>
+                            <div className="form-group-item">
+                                <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput} autoFocus autoCorrect={true}/>
+                            </div>
                         </div>
 
 
                         <div className={progress === 1 ? "form-item initial-comein" :  progress === -1 ? "form-item forward": "form-item"} style={{"--fromX":"0%", "--toX": "100%", "--opacity": "0", "--opacityFrom": "1", "--opacityTo": "0"}}>
                             <label>Password</label>
                             <div className="form-group-item">
-                                <input type="password" placeholder="Enter password" value={user.password} onChange={validateInput}/>
-                                <img src={show} alt="Show password" />
+                                <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={user.password} onChange={validateInput}/>
+                                <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
                             </div>
                         </div>
 
