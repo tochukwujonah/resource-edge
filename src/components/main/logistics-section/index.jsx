@@ -43,7 +43,7 @@ const travelLogisticsIframe = ()=> {
             <h3>Travel Request</h3>
             <div className="disp-flex">
                 <aside>
-                    <EmployeeCard icon={ Sizwe } name="Sizwe Bansi" hasNeutrals />
+                    <EmployeeCard icon={ Sizwe } name="Sizwe Bansi" neutrals="bi" />
 
                 </aside>
                 <main>
