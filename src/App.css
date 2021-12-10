@@ -741,7 +741,7 @@ footer .right {
 }
 
 .form-control {
-    margin-top: 44px;
+    margin-top: 80px;
 }
 
 .box h2 {
@@ -777,6 +777,26 @@ footer .right {
     transition: 0.3s ease-out;
 }
 
+.input-group {
+    position: relative;
+    height: 40px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.input-group > div {
+    position: absolute;
+}
+
+.input-group > div:last-child {
+    right: 0%;
+    transform: translate(-150%, 0);
+}
+
 .inactive-btn {
     background-color: var(--grey2);
     color: rgb(149, 149, 149);
@@ -797,8 +817,10 @@ footer .right {
 @keyframes init-comein {
     from {
         transform: translate(50%, 0%);
+        opacity: 0;
     } to {
         transform: translate(0%, 0%);
+        opacity: 1;
     }
 }
 
@@ -809,8 +831,10 @@ footer .right {
 @keyframes back {
     from {
         transform: translate(0%, 0%);
+        opacity: 1;
     } to {
         transform: translate(-100%, 0%);
+        opacity: 0;
     }
 }
 
