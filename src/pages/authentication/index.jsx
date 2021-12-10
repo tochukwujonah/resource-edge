@@ -8,11 +8,7 @@ import Page from '../Page';
 
 const AuthPage = ()=> {
 
-    return (
-
-        <Page ChildComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" />
-       
-    )
+    return <Page childComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" />
 }
 
 
