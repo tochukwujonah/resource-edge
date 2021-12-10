@@ -13,7 +13,15 @@ const Main = ()=> {
             <PartnersSectionComponent />
 
             <footer>
-                
+                <div className="container footer-container">
+                    <section className="left">
+                        <h1 className="h1">resource edge</h1>
+                        <span>Throw paperwork into the trash.</span>
+                    </section>
+                    <section className="right">
+                        <span>Copyright © Genesys DevStudio . All rights reserved</span>
+                    </section>
+                </div>
             </footer>
             
         </main>
