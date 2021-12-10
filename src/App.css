@@ -720,7 +720,7 @@ footer .right {
     padding: 40px;
     position: static;
     width: 480px;
-    height: 421px;
+    height: auto;
     left: 0px;
     top: 105.53px;
     background: #FFFFFF;
