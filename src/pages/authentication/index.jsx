@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Loginman from '../../assets/illustration/Loginman.png';
 import LogManWoman from '../../assets/illustration/LogManWoman.png';
 import logo from '../../assets/images/text_logo.png';
 
 const AuthPage = ()=> {
+
+
+    const user = useState({email: '', password: ''});
+
+    const validateInput = (e)=> {
+
+    }
+
     return (
         <div className="page">
 
@@ -20,15 +28,19 @@ const AuthPage = ()=> {
                 <span>Access your resource edge account</span>
 
                 {/* My form */}
-                <form>
+                <form className="form-control">
                     <div className="form-item">
-                        <label>Email</label>
-                        <input type="email" placeholder="Enter email" />
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput}/>
                     </div>
                     <div className="form-item">
-                        <button className="btn">Next</button>
+                        <button className="inactive-btn">Next</button>
                     </div>
                 </form>
+
+                <hr/>
+
+                <a href="#">Forgot password?</a>
 
             </div>
             
