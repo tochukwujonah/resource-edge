@@ -4,6 +4,8 @@ import LogManWoman from '../../assets/illustration/LogManWoman.png';
 import logo from '../../assets/images/text_logo.png';
 
 import pencil from '../../assets/icons/pencil.png';
+import show from '../../assets/icons/show.png';
+import hide from '../../assets/icons/hide.png';
 
 const AuthPage = ()=> {
 
@@ -50,26 +52,38 @@ const AuthPage = ()=> {
                 <h2>Login</h2>
                 <span>Access your resource edge account</span>
 
-                <div className="email-name-edit">
-                    <p>
-                        <h2>Ositadinma Nwangwu</h2>
-                        <sm>o.nwangwu@genesystechhub.com</sm>
-                    </p>
-                    <img src={pencil} alt="Pencil" />
-                </div>
+                {/* If current field is password  field*/}
+
+                {
+                    progress === 1
+                    ?
+
+                    <div className="email-name-edit">
+                        <p>
+                            <h2>Ositadinma Nwangwu</h2>
+                            <sm>o.nwangwu@genesystechhub.com</sm>
+                        </p>
+                        <img src={pencil} alt="Pencil" onClick={backStep} />
+                    </div>
+
+                    : null
+                }
 
                 {/* My form */}
                 <form className="form-control">
                     <div className="input-group">
-                        <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"}>
+                        <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"} style={{"--fromX":"-100%", "--toX": "0%", "--opacityFrom": "0", "--opacityTo": "1"}}>
                             <label>Email Address</label>
                             <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput} autoFocus autoCorrect={true}/>
                         </div>
 
 
-                        <div className={progress === 1 ? "form-item initial-comein" :  "form-item forward"}>
+                        <div className={progress === 1 ? "form-item initial-comein" :  progress === -1 ? "form-item forward": "form-item"} style={{"--fromX":"0%", "--toX": "100%", "--opacity": "0", "--opacityFrom": "1", "--opacityTo": "0"}}>
                             <label>Password</label>
-                            <input type="password" placeholder="Enter password" value={user.password} onChange={validateInput}/>
+                            <div className="form-group-item">
+                                <input type="password" placeholder="Enter password" value={user.password} onChange={validateInput}/>
+                                <img src={show} alt="Show password" />
+                            </div>
                         </div>
 
                     </div>
