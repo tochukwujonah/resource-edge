@@ -26,7 +26,7 @@ export const EmployeeCard = ({ icon, name, hasNeutrals })=> {
         <div className="emp-card-container">
             <div className="employee-card">
                 <img src={ icon } />
-                <span> { name } </span>
+                <span style={ hasNeutrals ? {fontSize: "10.48px"} : null}> { name } </span>
                 {
                     hasNeutrals ?
                         <div className="neural-bar-lg-group">

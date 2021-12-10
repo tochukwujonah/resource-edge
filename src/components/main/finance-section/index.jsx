@@ -3,6 +3,8 @@ import React from 'react'
 import taskList from '../../../assets/icons/task list.svg'
 import pay from '../../../assets/icons/pay.svg'
 
+import { Caption, Card } from '../../global-components'
+
 
 const FinanceSectionComponent = ()=> {
     return (
