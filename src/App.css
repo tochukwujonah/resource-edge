@@ -23,6 +23,10 @@ hr {
     margin-bottom: 12px;
 }
 
+ul {
+    list-style: none;
+}
+
 body::-webkit-scrollbar {
     width: .2em;
 }
@@ -296,12 +300,13 @@ a {
 }
 
 /* Logistics section */
-.logistics-section .top {
+.main-component-item .top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logistics-section .top > *:first-child {
+.lmain-component-item .top > *:first-child {
     margin-right: 40px;
 }
 
@@ -386,6 +391,55 @@ a {
     border-radius: 17.632335662841797px;
     padding: 1px, 4px, 1px, 4px;
 }
+
+/* finance section */
+.employees-table {
+    border: 0.8px solid #DDDDDD;
+}
+
+.employees-table .table-header {
+    border-bottom: 0.8px solid #DDDDDD;
+    height: 45.68400573730469px;
+    left: 95.59912109375px;
+    border-radius: 0px;
+    padding-left: 20.87px;
+    display: flex;
+    align-items: center;
+
+}
+
+.employees-table ul li span {
+    display: inline-block;
+    width: 128.98px;
+}
+
+.employees-table ul li {
+    padding:17px 20.87px;
+}
+
+.employees-table ul li:not(:last-child) {
+    border-bottom: 0.8px solid #DDDDDD;
+}
+
+
+.employees-table ul li.t-headers {
+    padding:10.31px 20.87px;
+}
+
+.employees-table ul li.t-headers span {
+    font-weight: 500;
+}
+
+.employees-table ul li span:nth-of-type(1) {
+    width: 57px;
+}
+
+.employees-table ul li span:nth-of-type(2) {
+    width: 214.15px;
+}
+
+
+
 
 /* Global components */
 
