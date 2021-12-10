@@ -14,6 +14,7 @@ import Sizwe from '../../../assets/images/staffs/Sizwe.png'
 import Ebele from '../../../assets/images/staffs/Ebele.png'
 import Banigo from '../../../assets/images/staffs/Banigo.png'
 import Abongile from '../../../assets/images/staffs/Abongile.png'
+import Achieng from '../../../assets/images/staffs/Achieng.png'
 
 
 const HumanResourceSectionComponent = ()=> {
@@ -70,6 +71,7 @@ const employeeDirectoryIframe = ()=> {
                     <EmployeeCard icon={Ebele} name="Ebele Rewane" />
                     <EmployeeCard icon={Banigo} name="Banigo Selema" />
                     <EmployeeCard icon={Abongile} name="Abongile Amba" />
+                    <EmployeeCard icon={Achieng} name="Achieng Johnson" floating={true}/>
                 </div>
         </>
     );
