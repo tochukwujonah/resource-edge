@@ -3,6 +3,8 @@ import Loginman from '../../assets/illustration/Loginman.png';
 import LogManWoman from '../../assets/illustration/LogManWoman.png';
 import logo from '../../assets/images/text_logo.png';
 
+import pencil from '../../assets/icons/pencil.png';
+
 const AuthPage = ()=> {
 
 
@@ -53,6 +55,7 @@ const AuthPage = ()=> {
                         <h2>Ositadinma Nwangwu</h2>
                         <sm>o.nwangwu@genesystechhub.com</sm>
                     </p>
+                    <img src={pencil} alt="Pencil" />
                 </div>
 
                 {/* My form */}
