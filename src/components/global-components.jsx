@@ -21,10 +21,10 @@ export const Card = ({ icon, color, title, body, hasShadow=true })=> {
     )
 }
 
-export const EmployeeCard = ({ icon, name, neutrals = "mono" })=> {
+export const EmployeeCard = ({ icon, name, neutrals = "mono", floating = false })=> {
     return (
         <div className="emp-card-container">
-            <div className="employee-card">
+            <div className={ floating ? "employee-card floating" : "employee-card" }>
                 <img src={ icon } />
                 <span style={ neutrals === "bi" ? {fontSize: "10.48px"} : null}> { name } </span>
                 {
