@@ -34,9 +34,30 @@ const Dashboard = ()=> {
                 <div className="container dashboard-container">
                     <h1>Hello, {params.user}</h1>
                     <h5>Welcome and good to have you back</h5>
-                    <br />
+                    <br /><br /><br />
 
                     <h3>Things to do</h3>
+                    <div className="todos">
+                        <div className="todo">
+                            <div className="todo-left">
+                                <div className="empty-circle"></div>
+                                <small>Upload your employee performance agreement</small>
+                            </div>
+
+                            <button className="btn-empty">Begin</button>
+
+                        </div>
+
+                        <div className="todo">
+                            <div className="todo-left">
+                                <div className="empty-circle"></div>
+                                <small>Start quarterly self review</small>
+                            </div>
+
+                            <button className="btn-grey">Resume</button>
+
+                        </div>
+                    </div>
                 </div>
 
             </main>
