@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import Loginman from '../assets/illustration/Loginman.png';
 import LogManWoman from '../assets/illustration/LogManWoman.png';
 import logo from '../assets/images/text_logo.png';
 
-const Page = ({ title, caption, link, action=null, ChildComponent=null })=> {
+const Page = ({ title, caption, link, path=null, ChildComponent=null })=> {
     return (
         <div className="page">
 
@@ -24,7 +25,7 @@ const Page = ({ title, caption, link, action=null, ChildComponent=null })=> {
                 ChildComponent ? <ChildComponent /> : null
             }
 
-        <a href="#" onClick={action}>{link}</a>
+        <Link to={path}>{link}</Link>
 
         </div>
         
