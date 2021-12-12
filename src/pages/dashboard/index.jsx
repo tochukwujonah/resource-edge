@@ -4,6 +4,7 @@ import avatar from '../../assets/icons/avatar.png'
 
 import employee from '../../assets/icons/Employee.png'
 import talentManager from '../../assets/icons/Talent Manager.png'
+import check from '../../assets/icons/check.png'
 
 const Dashboard = ()=> {
     const params = useParams();
@@ -74,19 +75,28 @@ const Dashboard = ()=> {
     )
 }
 
-const DropDown = ({showDropDown, user})=> {
-    const [selected, setSelected] = useState(1);
+const DropDown = ({showDropDown, user, setDashbordCaption})=> {
+    const [selected, setSelected] = useState(0);
     const [listItems, setListItems] = useState([
-        {icon: employee, label: 'Employee'},
-        {icon: talentManager, label: 'Talent Manager'}
+        {icon: employee, label: 'Employee', selected: true},
+        {icon: talentManager, label: 'Talent Manager', selected: false}
     ]);
 
     /*
     <li data-id={1} onClick={pickDropMenuItem}>Employee <span className={ selected === 1 ? "ok selected" : "ok" }></span></li>
                 <li data-id={2} onClick={pickDropMenuItem}>Talent Manager <span className={ selected === 2 ? "ok selected" : "ok" }></span></li> */
-                
-    const pickDropMenuItem = (e) => {
-        setSelected(parseInt(e.target.dataset.id));
+
+    const pickDropMenuItem = (id) => {
+        const listItemsClone = [...listItems];
+        const clickedItem = listItemsClone.splice(id, 1);
+        clickedItem[0].selected = true; //Current element is selected
+        listItemsClone[0].selected = false; //Unselect all other items, 1 in our case
+        const updatedList = [...clickedItem, ...listItemsClone];
+        setListItems(updatedList);
+
+        //Set dashboard caption
+        
+        
     }
 
     return (
@@ -95,6 +105,14 @@ const DropDown = ({showDropDown, user})=> {
             <span className="br-28">Profile</span>
             <small>Use Resource Edge as</small>
             <ul> 
+                {
+                    listItems.map((item, idx) => (
+                        <li key={idx} onClick={()=> pickDropMenuItem(idx)}>
+                            <span><img src={item.icon} alt={item.label} />{item.label}</span>
+                            <img className={item.selected ? "check show-check" : "check"} src={check} alt="Check" />
+                        </li>
+                    ))
+                }
                 
             </ul>
 
