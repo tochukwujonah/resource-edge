@@ -2,7 +2,13 @@ import React, { useState } from 'react'
 import Page from '../Page'
 
 const ResetPasswordPage = ()=> {
-    return <Page title="Reset Password" caption="To enable us reset your password, enter your email below" childComponent={ ChildComponent } link="Back to login" />
+    return (
+        <>
+        
+        <Page title="Reset Password" caption="To enable us reset your password, enter your email below" ChildComponent={ ChildComponent } link="Back to login" />
+        
+        </>
+    )
 }
 
 const ChildComponent = ()=> {
@@ -35,7 +41,6 @@ const ChildComponent = ()=> {
 
     return (
         <>
-            <h1>Jesus is Lord</h1>
             {/* My form */}
             <form className="form-control">
                    
