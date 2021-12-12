@@ -5,7 +5,7 @@ import avatar from '../../assets/icons/avatar.png';
 const Dashboard = ()=> {
     const params = useParams();
 
-    const [showDropDown, setShowDropDown] = useState(false);
+    const [showDropDown, setShowDropDown] = useState(true);
 
     const toggleDropDown = _=> setShowDropDown(!showDropDown);
 
@@ -30,7 +30,7 @@ const Dashboard = ()=> {
                    <img src={avatar} alt="Avatar" onClick={toggleDropDown}/>
                </div>
 
-                <DropDown showDropDown={showDropDown}  />
+                <DropDown showDropDown={showDropDown} user={params.user} />
                 
             </header>
 
@@ -71,18 +71,22 @@ const Dashboard = ()=> {
     )
 }
 
-const DropDown = ({showDropDown})=> {
+const DropDown = ({showDropDown, user})=> {
     const [selected, setSelected] = useState(1);
+    
 
     const pickDropMenuItem = (e) => {
-        setSelected(e.target.dataset.id);
+        setSelected(parseInt(e.target.dataset.id));
     }
 
     return (
         <div className={!showDropDown ? "drop-down hide-drop-down" : "drop-down show-drop-down"}>
+            <h3 className="user-txt">{user.toUpperCase()}</h3>
+            <span className="br-28">Profile</span>
+            <small>Use Resource Edge as</small>
             <ul> 
-                <li data-id={1} onClick={pickDropMenuItem}>TM Manager <span className={ selected === 1 ? "ok sekected" : "ok" }></span></li>
-                <li data-id={2} onClick={pickDropMenuItem}>A Member <span className={ selected === 2 ? "ok sekected" : "ok" }></span></li>
+                <li data-id={1} onClick={pickDropMenuItem}>Employee <span className={ selected === 1 ? "ok selected" : "ok" }></span></li>
+                <li data-id={2} onClick={pickDropMenuItem}>Talent Manager <span className={ selected === 2 ? "ok selected" : "ok" }></span></li>
             </ul>
 
             <hr />
