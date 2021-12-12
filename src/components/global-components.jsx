@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import show from '../assets/icons/show.png';
 import hide from '../assets/icons/hide.png';
 
@@ -48,7 +48,7 @@ export const EmployeeCard = ({ icon, name, neutrals = "mono", floating = false }
     )
 }
 
-export const PasswordField = ({ label, value, onChange })=> {
+export const PasswordField = ({ label, value, onChange, id })=> {
     const [showPassword, setShowpassword] = useState(false);
     // const [password, setPassword] = useState({newPass: '', confirmPass: ''});
     // const [isValid, setIsValid] = useState(false);
@@ -62,8 +62,8 @@ export const PasswordField = ({ label, value, onChange })=> {
         <div className="form-item">
             <label>{label}</label>
             <div className="form-group-item">
-                <input type={showPassword ? "password" : "text"} placeholder="Enter password" value={value} onChange={ onChange }/>
-                <img src={showPassword ? show : hide} alt="Show password" onClick={(togglePassword)} />
+                <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={value} onChange={ onChange } data-id={id}/>
+                <img src={!showPassword ? show : hide} alt="Show password" onClick={(togglePassword)} />
             </div>
         </div>
     )
