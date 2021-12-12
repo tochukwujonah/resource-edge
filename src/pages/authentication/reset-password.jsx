@@ -16,12 +16,13 @@ const ChildComponent = ()=> {
 
     const [isValid, setIsValid] = useState(false); //Track if email is valid or not
     const [showValidateEmailSentToEmail, setShowValidateEmailSentToEmail] = useState(false); //Switch screen to recovery email sent message
+    const [showPasswordChangedMessage, setShowPasswordChangedMessage] = useState(false);
 
     return (
         <>
             {/* My form */}
             {
-                !showValidateEmailSentToEmail ? <ResetPasswordForm /> : <RecoveryEmailSent />
+                !showPasswordChangedMessage ? <ResetPasswordForm setShowPasswordChangedMessage={setShowPasswordChangedMessage} /> : <PasswordChangedMessage />
             }
 
             {/* <EmailForm validityState={{isValid, setIsValid}} setShowValidateEmailSentToEmail={setShowValidateEmailSentToEmail} /> */}
@@ -82,8 +83,8 @@ const EmailForm = ({validityState, setShowValidateEmailSentToEmail})=> {
     )
 }
 
-const ResetPasswordForm = ()=> {
-    
+const ResetPasswordForm = ({setShowPasswordChangedMessage})=> {
+
     const [password, setPassword] = useState({1: '', 2: ''});
     const [isValid, setIsValid] = useState(false);
 
@@ -98,7 +99,9 @@ const ResetPasswordForm = ()=> {
 
 
     const submitForm = (e)=> {
+        e.preventDefault();
 
+        setShowPasswordChangedMessage(true);
     }
 
 
@@ -140,5 +143,14 @@ const RecoveryEmailSent = ()=> {
     );
 }
 
+
+const PasswordChangedMessage = ()=> {
+    return (
+        <div className="password-changed-container">
+            <img src={checkCircle} alt="Check Circle" />
+            <p>Your password has been changed successfully</p>
+        </div>
+    );
+}
 
 export default ResetPasswordPage
