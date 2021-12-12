@@ -1019,9 +1019,20 @@ footer .right {
 }
 
 .show-drop-down {
-
+    animation: scaleOut 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
 }
 
+@keyframes scaleOut {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 .drop-down {
     position: absolute;
     right: 50px;
@@ -1051,6 +1062,10 @@ footer .right {
     height: 24px;
     border-radius: 50%;
     background-color: #DDDDDD;
+}
+
+.drop-down ul li .ok.seleced {
+    background-color: var(--primary-blue);
 }
 
 /* Page illustration */
