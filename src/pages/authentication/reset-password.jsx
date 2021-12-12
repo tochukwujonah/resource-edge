@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import Page from '../Page'
 import checkCircle from '../../assets/icons/check-circle.png'
 
+import show from '../../assets/icons/show.png';
+import hide from '../../assets/icons/hide.png';
+
 const ResetPasswordPage = ()=> {
     const [showCaption, setShowCaption] = useState(true);
 
@@ -76,6 +79,56 @@ const EmailForm = ({validityState, setShowValidateEmailSentToEmail})=> {
     )
 }
 
+const ResetPasswordForm = ()=> {
+
+    const [showPassword, setShowpassword] = useState(false);
+    const [password, setPassword] = useState({newPass: '', confirmPass: ''});
+    const [isValid, setIsValid] = useState(false);
+
+    const onPasswordChange = (e)=> {
+        
+            setPassword({...password, newPass: e.target.value});   
+        
+    }
+
+    //Toggle password anonimity
+    const togglePassword = ()=> setShowpassword(!showPassword);
+
+    const submitForm = (e)=> {
+
+    }
+
+
+    return (
+        <>
+            <span>To enable us reset your password, enter your email below</span>
+            <form className="form-control">
+                   
+                   <div className="form-item">
+                       <label>New Password</label>
+                       <div className="form-group-item">
+                        <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={password.newPass} onChange={onPasswordChange}/>
+                        <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
+                    </div>
+                   </div>
+
+                   <div className="form-item">
+                       <label>Confirm Password</label>
+                       <div className="form-group-item">
+                            <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={password.confirmPass} onChange={onPasswordChange}/>
+                            <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
+                        </div>
+                   </div>
+
+
+               <div className="form-item">
+                   <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={submitForm}>Submit</button>
+               </div>
+           </form>
+        </>
+    )
+}
+
 
 const RecoveryEmailSent = ()=> {
     return (
@@ -85,5 +138,6 @@ const RecoveryEmailSent = ()=> {
         </div>
     );
 }
+
 
 export default ResetPasswordPage
