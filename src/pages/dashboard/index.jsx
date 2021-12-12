@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import avatar from '../../assets/icons/avatar.png';
+import avatar from '../../assets/icons/avatar.png'
+
+import employee from '../../assets/icons/Employee.png'
+import talentManager from '../../assets/icons/Talent Manager.png'
 
 const Dashboard = ()=> {
     const params = useParams();
@@ -73,8 +76,15 @@ const Dashboard = ()=> {
 
 const DropDown = ({showDropDown, user})=> {
     const [selected, setSelected] = useState(1);
-    
+    const [listItems, setListItems] = useState([
+        {icon: employee, label: 'Employee'},
+        {icon: talentManager, label: 'Talent Manager'}
+    ]);
 
+    /*
+    <li data-id={1} onClick={pickDropMenuItem}>Employee <span className={ selected === 1 ? "ok selected" : "ok" }></span></li>
+                <li data-id={2} onClick={pickDropMenuItem}>Talent Manager <span className={ selected === 2 ? "ok selected" : "ok" }></span></li> */
+                
     const pickDropMenuItem = (e) => {
         setSelected(parseInt(e.target.dataset.id));
     }
@@ -85,8 +95,7 @@ const DropDown = ({showDropDown, user})=> {
             <span className="br-28">Profile</span>
             <small>Use Resource Edge as</small>
             <ul> 
-                <li data-id={1} onClick={pickDropMenuItem}>Employee <span className={ selected === 1 ? "ok selected" : "ok" }></span></li>
-                <li data-id={2} onClick={pickDropMenuItem}>Talent Manager <span className={ selected === 2 ? "ok selected" : "ok" }></span></li>
+                
             </ul>
 
             <hr />
