@@ -1,19 +1,28 @@
 import './App.css';
-import Header from './components/header';
-import Showcase from './components/showcase';
-import Main from './components/main';
+import AuthPage from './pages/authentication';
+import ResetPasswordPage from './pages/authentication/reset-password';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/landing';
+import Dashboard from './pages/dashboard';
 
 const App = ()=> {
   return (
     <div className="App">
-      {/* My header section */}
-      <Header />
 
-      {/* My showcase section */}
-      <Showcase />
+      <Router>
 
-      {/* My main section */}
-      <Main />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<AuthPage />} />
+          <Route path="/forgot-password" element={<ResetPasswordPage />} />
+          <Route path="/dashboard/:" element={<Dashboard />} />
+          
+        </Routes>
+
+      </Router>
+
+
       
     </div>
   );
