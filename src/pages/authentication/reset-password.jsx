@@ -83,15 +83,16 @@ const EmailForm = ({validityState, setShowValidateEmailSentToEmail})=> {
 }
 
 const ResetPasswordForm = ()=> {
-
-    const [showPassword1, setShowpassword1] = useState(false);
-    const [showPassword2, setShowpassword2] = useState(false);
-    const [password, setPassword] = useState({newPass: '', confirmPass: ''});
+    
+    const [password, setPassword] = useState({1: '', 2: ''});
     const [isValid, setIsValid] = useState(false);
 
     const onPasswordChange = (e)=> {
-        
-            setPassword({...password, newPass: e.target.value});   
+
+        setPassword({...password, [e.target.dataset.id]: e.target.value});
+
+        if((password[1].length !== 0 || password[2].length !== 0) && (password[1].length === password[2].length) && (password[1] === password[2])) setIsValid(true);   
+            else setIsValid(false);       
         
     }
 
@@ -103,21 +104,22 @@ const ResetPasswordForm = ()=> {
 
     return (
         <>
-            <span>To enable us reset your password, enter your email below</span>
+            <span>The password should have at least 6 characters</span>
             <form className="form-control">
                    
                   {/* New Password Field */}
-                  <PasswordField label="New Password" value={password.newPass} onChange={onPasswordChange} />
+                  <PasswordField label="New Password" value={password[1]} onChange={onPasswordChange} id={1} />
 
-                    {/* Confirm Password Field */}
+                {/* Confirm Password Field */}
+                <PasswordField label="Confirm Password" value={password[2]} onChange={onPasswordChange} id={2}  />
 
-                   <div className="form-item">
+                   {/* <div className="form-item">
                        <label>Confirm Password</label>
                        <div className="form-group-item">
                             <input type={!showPassword2 ? "password" : "text"} placeholder="Enter password" value={password.confirmPass} onChange={onPasswordChange}/>
                             <img src={!showPassword2 ? show : hide} alt="Show password" onClick={(_, id=2)=> togglePassword(id)} />
                         </div>
-                   </div>
+                   </div> */}
 
 
                <div className="form-item">
