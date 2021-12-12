@@ -2,7 +2,9 @@
 /* Color constants */
 :root {
     --grey2: #B0B7C2;
+    --dark-grey: #344563;
     --primary-blue: #0052CC;
+    --thin-grey: #5E6C84;
     --secondary-blue: #008DA6;
     --dull-blue: #42526E;
     --orange: #FF8B00;
@@ -18,8 +20,12 @@
 
 @font-face {
     font-family: 'Circular Std';
-    src: local('Circula Std'), url(./assets/fonts/Circular\ Std\ Medium\ 500.ttf) format('truetype');
-  }
+    src: local('Circular Std'), url(./assets/fonts/Circular\ Std\ Medium\ 500.ttf) format('truetype');
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 450;
+}
 
 hr {
     border: 1px solid #F4F5F7;
@@ -319,6 +325,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 450;
 }
 
 .lmain-component-item .top > *:first-child {
@@ -547,6 +554,11 @@ footer .right {
     
 }
 
+.card small{
+    color: var(--thin-grey);
+    padding-top: 10px;
+}
+
 .employees {
     width: auto;
 }
@@ -624,8 +636,10 @@ footer .right {
     display: block;
     font-size: 16px;
     font-weight: 450px;
+    color: var(--dark-grey);
+    line-height: 24px;
     margin-top: 36px;
-    width: 345px;
+    max-width: 450px;
 }
 
 
@@ -731,6 +745,7 @@ footer .right {
     border-radius: 8px;
     text-align: center;
     overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .box a {
@@ -880,6 +895,19 @@ footer .right {
         opacity: var(--opacityTo);
     }
 }
+
+
+.recovery-email-sent-container img {
+    width: 176px;
+    margin-bottom: 50.67px;
+}
+
+
+.recovery-email-sent-container p {
+    margin-bottom: 40px;
+}
+
+
 
 /* Page illustration */
 
