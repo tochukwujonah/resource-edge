@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate, Link } from 'react-router-dom';
 
 const Nav = ()=> {
+
+    // const navigate = useNavigate();
+
     return (
         <nav className="nav">
             <ul>
@@ -8,8 +12,8 @@ const Nav = ()=> {
                 <li><a href="#">About</a></li>
             </ul>
             <div className="right">
-                <a href="">Sign Up</a>
-                <a href="#" className="btn">Sign In</a>
+                <Link to="">Sign Up</Link>
+                <Link to="/login" className="btn">Sign In</Link>
             </div>
         </nav>
     )
