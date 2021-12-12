@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Page from '../Page'
+import checkCircle from '../../assets/icons/check-circle.png'
 
 const ResetPasswordPage = ()=> {
+    
+
     return (
         <>
         
@@ -13,8 +16,25 @@ const ResetPasswordPage = ()=> {
 
 const ChildComponent = ()=> {
 
-    const [email, setEmail] = useState('');
-    const [isValid, setIsValid] = useState(false);
+    const [isValid, setIsValid] = useState(false); //Track if email is valid or not
+    const [showValidateEmailSentToEmail, setShowValidateEmailSentToEmail] = useState(false); //Switch screen to recovery email sent message
+
+    return (
+        <>
+            {/* My form */}
+            {
+                !showValidateEmailSentToEmail ? <EmailForm validityState={{isValid, setIsValid}} setShowValidateEmailSentToEmail={setShowValidateEmailSentToEmail} /> : <RecoveryEmailSent />
+            }
+
+            <hr/>
+        </>
+    )
+}
+
+
+const EmailForm = ({validityState, setShowValidateEmailSentToEmail})=> {
+    const {isValid, setIsValid} = validityState;
+    const [email, setEmail] = useState(''); //Store user's email
 
     //Email change handler
     const handleEmailInputChange = (e)=> {
@@ -29,6 +49,7 @@ const ChildComponent = ()=> {
     //Form submit handler
     const submitForm = (e)=> {
         e.preventDefault();
+        setShowValidateEmailSentToEmail(true);
     }
 
     //Email validate function
@@ -40,32 +61,30 @@ const ChildComponent = ()=> {
     }
 
     return (
-        <>
-            {/* My form */}
-            <form className="form-control">
+        <form className="form-control">
                    
-                        <div className="form-item">
-                            <label>Email Address</label>
-                            <div className="form-group-item">
-                                <input type="email" placeholder="Enter email" value={email} onChange={handleEmailInputChange} autoFocus autoCorrect={true}/>
-                            </div>
-                        </div>
-
-
                     <div className="form-item">
-                        <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={submitForm}>Submit</button>
+                        <label>Email Address</label>
+                        <div className="form-group-item">
+                            <input type="email" placeholder="Enter email" value={email} onChange={handleEmailInputChange} autoFocus autoCorrect={true}/>
+                        </div>
                     </div>
-                </form>
 
-                <hr/>
-        </>
+
+                <div className="form-item">
+                    <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={submitForm}>Submit</button>
+                </div>
+            </form>
     )
 }
 
 
-const recoveryEmailSent = ()=> {
+const RecoveryEmailSent = ()=> {
     return (
-
+        <div className="recovery-email-sent-container">
+            <img src={checkCircle} alt="Check Circle" />
+            <p>A recovery email has been sent to your email address. </p>
+        </div>
     );
 }
 
