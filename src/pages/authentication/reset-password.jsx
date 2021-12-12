@@ -3,15 +3,9 @@ import Page from '../Page'
 import checkCircle from '../../assets/icons/check-circle.png'
 
 const ResetPasswordPage = ()=> {
-    
+    const [showCaption, setShowCaption] = useState(true);
 
-    return (
-        <>
-        
-        <Page title="Reset Password" caption="To enable us reset your password, enter your email below" ChildComponent={ ChildComponent } link="Back to login" />
-        
-        </>
-    )
+    return  <Page title="Reset Password" ChildComponent={ ChildComponent } link="Back to login" />
 }
 
 const ChildComponent = ()=> {
@@ -61,20 +55,24 @@ const EmailForm = ({validityState, setShowValidateEmailSentToEmail})=> {
     }
 
     return (
-        <form className="form-control">
+        <>
+            <span>To enable us reset your password, enter your email below</span>
+            <form className="form-control">
                    
-                    <div className="form-item">
-                        <label>Email Address</label>
-                        <div className="form-group-item">
-                            <input type="email" placeholder="Enter email" value={email} onChange={handleEmailInputChange} autoFocus autoCorrect={true}/>
-                        </div>
-                    </div>
+                   <div className="form-item">
+                       <label>Email Address</label>
+                       <div className="form-group-item">
+                           <input type="email" placeholder="Enter email" value={email} onChange={handleEmailInputChange} autoFocus autoCorrect={true}/>
+                       </div>
+                   </div>
 
 
-                <div className="form-item">
-                    <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={submitForm}>Submit</button>
-                </div>
-            </form>
+               <div className="form-item">
+                   <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={submitForm}>Submit</button>
+               </div>
+           </form>
+
+        </>
     )
 }
 
