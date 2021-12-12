@@ -62,4 +62,11 @@ const ChildComponent = ()=> {
     )
 }
 
+
+const recoveryEmailSent = ()=> {
+    return (
+
+    );
+}
+
 export default ResetPasswordPage
