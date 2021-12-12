@@ -1,9 +1,13 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import avatar from '../../assets/icons/avatar.png';
 
 const Dashboard = ()=> {
     const params = useParams();
+
+    const [showDropDown, setShowDropDown] = useState(false);
+
+    const toggleDropDown = _=> setShowDropDown(!showDropDown);
 
     return (
         <div className="dashboard">
@@ -23,9 +27,10 @@ const Dashboard = ()=> {
                </div>
 
                <div className="header-right">
-                   <img src={avatar} alt="Avatar"/>
+                   <img src={avatar} alt="Avatar" onClick={toggleDropDown}/>
                </div>
 
+                <DropDown showDropDown={showDropDown}  />
                 
             </header>
 
@@ -66,10 +71,23 @@ const Dashboard = ()=> {
     )
 }
 
-const DropDown = (item)=> {
+const DropDown = ({showDropDown})=> {
+    const [selected, setSelected] = useState(1);
+
+    const pickDropMenuItem = (e) => {
+        setSelected(e.target.dataset.id);
+    }
+
     return (
-        <div className="drop-down">
-            
+        <div className={!showDropDown ? "drop-down hide-drop-down" : "drop-down show-drop-down"}>
+            <ul> 
+                <li data-id={1} onClick={pickDropMenuItem}>TM Manager <span className={ selected === 1 ? "ok sekected" : "ok" }></span></li>
+                <li data-id={2} onClick={pickDropMenuItem}>A Member <span className={ selected === 2 ? "ok sekected" : "ok" }></span></li>
+            </ul>
+
+            <hr />
+
+            <Link to="/">Logout</Link>
         </div>
     )
 }
