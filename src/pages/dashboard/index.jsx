@@ -5,11 +5,12 @@ import avatar from '../../assets/icons/avatar.png'
 import employee from '../../assets/icons/Employee.png'
 import talentManager from '../../assets/icons/Talent Manager.png'
 import check from '../../assets/icons/check.png'
+import logo from '../../assets/images/logo.png'
 
 const Dashboard = ()=> {
     const params = useParams();
 
-    const [showDropDown, setShowDropDown] = useState(true);
+    const [showDropDown, setShowDropDown] = useState(false);
     const [dashboardCaption, setDashboardCaption] = useState('Employee');
 
     const toggleDropDown = _=> setShowDropDown(!showDropDown);
@@ -24,7 +25,10 @@ const Dashboard = ()=> {
                         <span></span>
                     </div>
 
-                    <span className="logo">resource edge</span>
+                    <span className="logo logo-desk">resource edge</span>
+                    <div className="logo-mini-container">
+                        <span className="logo-mini"><img src={logo} alt="Logo" /></span>
+                    </div>
 
                     <hr className="vertical-hr" />
 
@@ -77,7 +81,6 @@ const Dashboard = ()=> {
 }
 
 const DropDown = ({showDropDown, user, setDashboardCaption})=> {
-    const [selected, setSelected] = useState(0);
     const [listItems, setListItems] = useState([
         {icon: employee, label: 'Employee', selected: true},
         {icon: talentManager, label: 'Talent Manager', selected: false}
