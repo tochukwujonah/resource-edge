@@ -3,7 +3,7 @@ import React from 'react'
 const Illustration = ()=> {
     return (
         <div className="showcase-illustration">
-            <svg width="120%" height="auto" viewBox="0 0 719.96 475.09" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg">
+            <svg className="svg" viewBox="0 0 719.96 475.09" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg">
             <path opacity="0.07" fill-rule="evenodd" clip-rule="evenodd" d="M195.41 64.3644C249.512 4.43699 361.978 -17.7691 477.543 15.4399C621.382 56.7744 715.551 168.304 687.877 264.549C664.113 347.194 558.233 391.695 437.711 376.45C383.43 421.4 290.431 436.529 195.582 409.273C64.2079 371.521 -20.9652 266.75 5.34226 175.26C25.1363 106.421 102.403 64.7155 195.41 64.3644Z" fill="url(#paint0_linear_1_238)"/>
             <g opacity="0.2">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M98.1476 319.351H89.4743V431.763H98.1476V319.351Z" fill="#8CA4D4"/>
