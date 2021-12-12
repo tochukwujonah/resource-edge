@@ -932,7 +932,7 @@ footer .right {
 }
 
 
-.dashboard-header > div {
+.dashboard-header > div:not(.drop-down) {
     height: 100%;
     display: flex;
     align-items: center;
@@ -1002,17 +1002,56 @@ footer .right {
     color: #222;
 }
 
+.hide-drop-down {
+    animation: scaleIn 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.show-drop-down {
+
+}
+
 .drop-down {
     position: absolute;
     right: 50px;
     top: 70px;
     width: 300px;
-    height: auto;
     padding: 30px 20px;
     background-color: #fff;
     box-shadow: -28px 46px 60px rgba(9, 30, 66, 0.08);
+    z-index: 99;
 }
 
+.drop-down ul {
+    width: 100%;
+}
+
+.drop-down ul li {
+    width: inherit;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.drop-down ul li .ok {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #DDDDDD;
+}
 
 /* Page illustration */
 
