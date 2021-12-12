@@ -1,16 +1,16 @@
 import React from 'react'
 
-import taskList from '../../../assets/icons/task list.svg'
-import pay from '../../../assets/icons/pay.svg'
+import taskList from '../../../../../assets/icons/task list.svg'
+import pay from '../../../../../assets/icons/pay.svg'
 
-import { Caption, Card } from '../../global-components'
+import { Caption, Card } from '../../../../../components/global-components'
 
 import IframeComponent from '../../iframe-component'
 
-import Sizwe from '../../../assets/images/staffs/Sizwe.png'
-import Ebele from '../../../assets/images/staffs/Ebele.png'
-import Banigo from '../../../assets/images/staffs/Banigo.png'
-import Abongile from '../../../assets/images/staffs/Abongile.png'
+import Sizwe from '../../../../../assets/images/staffs/Sizwe.png'
+import Ebele from '../../../../../assets/images/staffs/Ebele.png'
+import Banigo from '../../../../../assets/images/staffs/Banigo.png'
+import Abongile from '../../../../../assets/images/staffs/Abongile.png'
 
 const employees = [
     {avatar: Sizwe, name: "Sizwe Bansi", role: "CEO", earning: "50, 000", status: "Sent"},

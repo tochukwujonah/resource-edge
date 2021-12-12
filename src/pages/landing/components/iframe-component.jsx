@@ -1,9 +1,7 @@
 import React from 'react'
-import logo from '../assets/images/logo.png'
-import notification from '../assets/icons/notification.svg'
-import avatar from '../assets/images/staffs/right-content.png'
-
-
+import logo from '../../../assets/images/logo.png'
+import notification from '../../../assets/icons/notification.svg'
+import avatar from '../../../assets/images/staffs/right-content.png'
 
 
 const IframeComponent = ({ title, IframeBody })=> {

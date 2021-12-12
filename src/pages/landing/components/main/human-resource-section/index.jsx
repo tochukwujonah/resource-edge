@@ -1,20 +1,20 @@
 import React from 'react'
-import { Caption, Card } from '../../global-components'
-import team from '../../../assets/icons/team.svg'
-import calender from '../../../assets/icons/calender.svg'
-import goal from '../../../assets/icons/goal.svg'
+import { Caption, Card } from '../../../../../components/global-components'
+import team from '../../../../../assets/icons/team.svg'
+import calender from '../../../../../assets/icons/calender.svg'
+import goal from '../../../../../assets/icons/goal.svg'
 import IframeComponent from '../../iframe-component'
 
+import search from '../../../../../assets/icons/search.png'
 
-import search from '../../../assets/icons/search.png'
+import { EmployeeCard } from '../../../../../components/global-components'
 
-import { EmployeeCard } from '../../global-components'
 
-import Sizwe from '../../../assets/images/staffs/Sizwe.png'
-import Ebele from '../../../assets/images/staffs/Ebele.png'
-import Banigo from '../../../assets/images/staffs/Banigo.png'
-import Abongile from '../../../assets/images/staffs/Abongile.png'
-import Achieng from '../../../assets/images/staffs/Achieng.png'
+import Sizwe from '../../../../../assets/images/staffs/Sizwe.png'
+import Ebele from '../../../../../assets/images/staffs/Ebele.png'
+import Banigo from '../../../../../assets/images/staffs/Banigo.png'
+import Abongile from '../../../../../assets/images/staffs/Abongile.png'
+import Achieng from '../../../../../assets/images/staffs/Achieng.png'
 
 
 const HumanResourceSectionComponent = ()=> {

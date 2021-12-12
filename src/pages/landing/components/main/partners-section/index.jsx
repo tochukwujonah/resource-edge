@@ -1,9 +1,9 @@
 import React from 'react'
 
-import unn from '../../../assets/images/partners/unn.png'
-import tenece from '../../../assets/images/partners/tenece.png'
-import estate from '../../../assets/images/partners/private-estate.png'
-import genesys from '../../../assets/images/partners/genesys.png'
+import unn from '../../../../../assets/images/partners/unn.png'
+import tenece from '../../../../../assets/images/partners/tenece.png'
+import estate from '../../../../../assets/images/partners/private-estate.png'
+import genesys from '../../../../../assets/images/partners/genesys.png'
 
 const PartnersSectionComponent = ()=> {
     return (

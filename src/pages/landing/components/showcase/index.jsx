@@ -1,6 +1,6 @@
 import React from 'react'
 import Illustration from './illustration'
-import { Caption } from '../global-components' 
+import { Caption } from '../../../../components/global-components'
 
 const Showcase = ()=> {
     return (

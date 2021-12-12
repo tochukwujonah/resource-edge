@@ -1,14 +1,14 @@
 import React from 'react'
-import { Caption, Card, EmployeeCard } from '../../global-components'
+import { Caption, Card, EmployeeCard } from '../../../../../components/global-components'
 
-import sent from '../../../assets/icons/sent.svg'
-import briefcase from '../../../assets/icons/briefcase.svg'
+import sent from '../../../../../assets/icons/sent.svg'
+import briefcase from '../../../../../assets/icons/briefcase.svg'
 
-import plane from '../../../assets/icons/plane.svg'
-import bed from '../../../assets/icons/bed.svg'
+import plane from '../../../../../assets/icons/plane.svg'
+import bed from '../../../../../assets/icons/bed.svg'
 
 
-import Sizwe from '../../../assets/images/staffs/Sizwe.png'
+import Sizwe from '../../../../../assets/images/staffs/Sizwe.png'
 
 import IframeComponent from '../../iframe-component'
 
