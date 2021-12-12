@@ -901,13 +901,13 @@ footer .right {
 }
 
 
-.recovery-email-sent-container img {
+.recovery-email-sent-container img, .password-changed-container img {
     width: 176px;
     margin-bottom: 50.67px;
 }
 
 
-.recovery-email-sent-container p {
+.recovery-email-sent-container p, .password-changed-container p {
     margin-bottom: 40px;
 }
 
