@@ -10,6 +10,7 @@ const Dashboard = ()=> {
     const params = useParams();
 
     const [showDropDown, setShowDropDown] = useState(true);
+    const [dashboardCaption, setDashboardCaption] = useState('Employee');
 
     const toggleDropDown = _=> setShowDropDown(!showDropDown);
 
@@ -27,14 +28,14 @@ const Dashboard = ()=> {
 
                     <hr className="vertical-hr" />
 
-                    <span>TM Dashboard</span>
+                    <span>{ dashboardCaption } Dashboard</span>
                </div>
 
                <div className="header-right">
                    <img src={avatar} alt="Avatar" onClick={toggleDropDown}/>
                </div>
 
-                <DropDown showDropDown={showDropDown} user={params.user} />
+                <DropDown showDropDown={showDropDown} user={params.user} setDashboardCaption={setDashboardCaption} />
                 
             </header>
 
@@ -75,7 +76,7 @@ const Dashboard = ()=> {
     )
 }
 
-const DropDown = ({showDropDown, user, setDashbordCaption})=> {
+const DropDown = ({showDropDown, user, setDashboardCaption})=> {
     const [selected, setSelected] = useState(0);
     const [listItems, setListItems] = useState([
         {icon: employee, label: 'Employee', selected: true},
@@ -95,7 +96,21 @@ const DropDown = ({showDropDown, user, setDashbordCaption})=> {
         setListItems(updatedList);
 
         //Set dashboard caption
-        
+        setDashboardCaption(()=> {
+            //Check if clickedItem's label has two or more words joined
+            //If one word, return else split into array and join the first characters of each word
+            if(clickedItem[0].label.split(' ').length > 1) {
+                const splittedLabel = clickedItem[0].label.split(' ');
+                let initials = '';
+                for(let char of splittedLabel){
+                    initials += char[0];
+                }
+
+                return initials.toUpperCase();
+            }
+
+            return clickedItem[0].label;
+        });
         
     }
 
