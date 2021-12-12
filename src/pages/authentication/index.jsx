@@ -8,7 +8,7 @@ import Page from '../Page';
 
 const AuthPage = ()=> {
 
-    return <Page ChildComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" />
+    return <Page ChildComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" path="/forgot-password" />
 }
 
 
@@ -64,6 +64,7 @@ const ChildComponent = ()=> {
                 }
 
                 {/* My form */}
+                <div className="space"></div>
                 <form className="form-control">
                     <div className="input-group">
                         <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"} style={{"--fromX":"-100%", "--toX": "0%", "--opacityFrom": "0", "--opacityTo": "1"}}>
@@ -84,7 +85,7 @@ const ChildComponent = ()=> {
 
                     </div>
                     <div className="form-item">
-                        <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={nextStep}>Next</button>
+                        <button className={ isValid ? "active-btn" : "inactive-btn"} onClick={nextStep}>{ progress === 1 ? "Login" : "Next" }</button>
                     </div>
                 </form>
 

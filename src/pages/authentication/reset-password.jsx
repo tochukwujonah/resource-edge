@@ -9,7 +9,7 @@ import { PasswordField } from '../../components/global-components';
 const ResetPasswordPage = ()=> {
     const [showCaption, setShowCaption] = useState(true);
 
-    return  <Page title="Reset Password" ChildComponent={ ChildComponent } link="Back to login" />
+    return  <Page title="Reset Password" ChildComponent={ ChildComponent } link="Back to login" path="/login" />
 }
 
 const ChildComponent = ()=> {
@@ -22,7 +22,7 @@ const ChildComponent = ()=> {
         <>
             {/* My form */}
             {
-                !showPasswordChangedMessage ? <ResetPasswordForm setShowPasswordChangedMessage={setShowPasswordChangedMessage} /> : <PasswordChangedMessage />
+                !showValidateEmailSentToEmail ? <EmailForm validityState={{isValid, setIsValid}} setShowValidateEmailSentToEmail={setShowValidateEmailSentToEmail} /> : <RecoveryEmailSent />
             }
 
             {/* <EmailForm validityState={{isValid, setIsValid}} setShowValidateEmailSentToEmail={setShowValidateEmailSentToEmail} /> */}
