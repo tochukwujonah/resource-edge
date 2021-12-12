@@ -4,6 +4,7 @@ import checkCircle from '../../assets/icons/check-circle.png'
 
 import show from '../../assets/icons/show.png';
 import hide from '../../assets/icons/hide.png';
+import { PasswordField } from '../../components/global-components';
 
 const ResetPasswordPage = ()=> {
     const [showCaption, setShowCaption] = useState(true);
@@ -20,8 +21,10 @@ const ChildComponent = ()=> {
         <>
             {/* My form */}
             {
-                !showValidateEmailSentToEmail ? <EmailForm validityState={{isValid, setIsValid}} setShowValidateEmailSentToEmail={setShowValidateEmailSentToEmail} /> : <RecoveryEmailSent />
+                !showValidateEmailSentToEmail ? <ResetPasswordForm /> : <RecoveryEmailSent />
             }
+
+            {/* <EmailForm validityState={{isValid, setIsValid}} setShowValidateEmailSentToEmail={setShowValidateEmailSentToEmail} /> */}
 
             <hr/>
         </>
@@ -81,7 +84,8 @@ const EmailForm = ({validityState, setShowValidateEmailSentToEmail})=> {
 
 const ResetPasswordForm = ()=> {
 
-    const [showPassword, setShowpassword] = useState(false);
+    const [showPassword1, setShowpassword1] = useState(false);
+    const [showPassword2, setShowpassword2] = useState(false);
     const [password, setPassword] = useState({newPass: '', confirmPass: ''});
     const [isValid, setIsValid] = useState(false);
 
@@ -91,8 +95,6 @@ const ResetPasswordForm = ()=> {
         
     }
 
-    //Toggle password anonimity
-    const togglePassword = ()=> setShowpassword(!showPassword);
 
     const submitForm = (e)=> {
 
@@ -104,19 +106,16 @@ const ResetPasswordForm = ()=> {
             <span>To enable us reset your password, enter your email below</span>
             <form className="form-control">
                    
-                   <div className="form-item">
-                       <label>New Password</label>
-                       <div className="form-group-item">
-                        <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={password.newPass} onChange={onPasswordChange}/>
-                        <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
-                    </div>
-                   </div>
+                  {/* New Password Field */}
+                  <PasswordField label="New Password" value={password.newPass} onChange={onPasswordChange} />
+
+                    {/* Confirm Password Field */}
 
                    <div className="form-item">
                        <label>Confirm Password</label>
                        <div className="form-group-item">
-                            <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={password.confirmPass} onChange={onPasswordChange}/>
-                            <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
+                            <input type={!showPassword2 ? "password" : "text"} placeholder="Enter password" value={password.confirmPass} onChange={onPasswordChange}/>
+                            <img src={!showPassword2 ? show : hide} alt="Show password" onClick={(_, id=2)=> togglePassword(id)} />
                         </div>
                    </div>
 
