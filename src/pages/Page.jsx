@@ -5,7 +5,7 @@ import Loginman from '../assets/illustration/Loginman.png';
 import LogManWoman from '../assets/illustration/LogManWoman.png';
 import logo from '../assets/images/text_logo.png';
 
-const Page = ({ title, caption, link, path=null, ChildComponent=null })=> {
+const Page = ({ title, caption, link, path=null, ChildComponent=null, user=null, setState=null })=> {
     return (
         <div className="page">
 
@@ -22,7 +22,7 @@ const Page = ({ title, caption, link, path=null, ChildComponent=null })=> {
             {/* <span>{ caption }</span> */}
 
             {
-                ChildComponent ? <ChildComponent /> : null
+                ChildComponent ? <ChildComponent user={user} setUser={setState} /> : null
             }
 
         <Link to={path}>{link}</Link>

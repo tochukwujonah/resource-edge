@@ -5,15 +5,21 @@ import pencil from '../../assets/icons/pencil.png';
 import show from '../../assets/icons/show.png';
 import hide from '../../assets/icons/hide.png';
 import Page from '../Page';
+import { useNavigate } from 'react-router-dom';
 
 const AuthPage = ()=> {
 
-    return <Page ChildComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" path="/forgot-password" />
+    const [user, setUser] = useState({email: '', password: '', fullname: ''});
+
+    return <Page ChildComponent={ChildComponent} title="Login" caption="Access your resource edge account" link="Forgot password?" path="/forgot-password" user={user} setState={setUser} />
 }
 
 
-const ChildComponent = ()=> {
-    const [user, setUser] = useState({email: '', password: ''});
+const ChildComponent = ({ user, setUser })=> {
+    
+
+    const navigate = useNavigate();
+
     const [isValid, setIsValid] = useState(false);
     const [progress, setProgress] = useState(0); //Monitors progress, 1 is forward, -1 is backward 
     const [showPassword, setShowpassword] = useState(false);
@@ -36,7 +42,32 @@ const ChildComponent = ()=> {
 
     const nextStep = (e)=> {
         e.preventDefault();
-        setProgress(1);
+
+        const users = JSON.parse(localStorage.getItem('users')); //Load users from localDB
+        const you = users.filter(singleUser => singleUser.email === user.email)[0];
+
+        if(progress === 1){
+            //Login
+            if(you.password === user.password) navigate(`/dashboard/${user.fullname}`);
+            else {
+                alert("Password incorrect. Please input a valid password");
+            }
+            
+
+        } else {
+            
+            //Check if you exist in the DB
+            if(you) {
+                setUser({...user, fullname: you.fullname});
+                setProgress(1);
+            } else {
+                alert("Invalid login details");
+                // Navigate("/signup");
+            }
+
+            
+        }
+        
     }
 
     const backStep = ()=> setProgress(-1);
@@ -54,8 +85,8 @@ const ChildComponent = ()=> {
 
                     <div className="email-name-edit">
                         <p>
-                            <h2>Ositadinma Nwangwu</h2>
-                            <sm>o.nwangwu@genesystechhub.com</sm>
+                            <h2>{user.fullname}</h2>
+                            <sm>{user.email}</sm>
                         </p>
                         <img src={pencil} alt="Pencil" onClick={backStep} />
                     </div>
