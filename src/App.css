@@ -1166,6 +1166,10 @@ footer .right {
 }
 
 
+.mini {
+    display: none;
+}
+
 /* Media query */
 @media screen and (max-width: 500px) {
     .logo-desk {
