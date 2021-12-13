@@ -330,6 +330,11 @@ button {
 
 .lmain-component-item .top > *:first-child {
     margin-right: 40px;
+    flex: 3;
+}
+
+.main-component-item .top .caption h1 {
+    width: 100% !important;
 }
 
 .disp-flex {
