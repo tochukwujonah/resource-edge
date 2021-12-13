@@ -29,7 +29,7 @@ const Nav = ({ dropMenuIsVisible,setDropMenuIsVisible })=> {
                         <li><a href="#">About</a></li>
                     </ul>
                     <div className="right">
-                        <Link to="">Sign Up</Link>
+                        <Link to="/signup">Sign Up</Link>
                         <Link to="/login" className="btn" >Sign In</Link>
                     </div>
                 </div>

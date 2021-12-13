@@ -186,6 +186,7 @@ button {
 
 .iframe {
     width: 886px;
+    max-width: 886px;
     height: 506px;
     background-color: #fafbfc;
     box-shadow: -28px 46px 60px rgba(9, 30, 66, 0.08);
@@ -1316,9 +1317,17 @@ footer .social-icons img {
 .mini {
     display: none;
 }
+/****************************************************************/
+
+/*Tablet styling*/
+@media screen and (min-width: 600px) and (max-width: 1024px){
+
+}
+
+
 
 /* Media query */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 278px) and (max-width: 599px) {
 
     /* Show case section */
     .showcase-container {
