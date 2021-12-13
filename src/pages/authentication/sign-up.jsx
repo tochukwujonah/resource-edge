@@ -9,6 +9,8 @@ const SignUp = ()=> {
 
 const ChildComponent = ()=> {
     return (
+        <>
+        <span>Sign up today to get started</span>
         <form className="form-control">
             <div className="form-item">
                 <label>Fullname</label>
@@ -20,10 +22,25 @@ const ChildComponent = ()=> {
             <div className="form-item">
                 <label>Email</label>
                 <div className="form-group-item">
-                    <input placeholder="Enter your email" />
+                    <input type="email" placeholder="Enter your email" />
+                </div>
+            </div>
+
+            <div className="form-item">
+                <label>Password</label>
+                <div className="form-group-item">
+                    <input placeholder="Enter your choice password" />
+                </div>
+            </div>
+
+            <div className="form-item">
+                <div className="form-group-item">
+                    <button type="submit">Signup</button>
                 </div>
             </div>
         </form>
+
+        </>
     )
 }
 
