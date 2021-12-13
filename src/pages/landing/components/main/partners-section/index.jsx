@@ -7,11 +7,13 @@ import genesys from '../../../../../assets/images/partners/genesys.png'
 
 const PartnersSectionComponent = ()=> {
     return (
-        <div className="container partners">
-            <img src={ unn } alt="University of Nigeria Nsukka" />
-            <img src={ tenece } alt="Tenece" />
-            <img src={ estate } alt="Private Estate" />
-            <img src={ genesys } alt="Genesys" />
+        <div className="partners-container">
+            <div className="container partners">
+                <img src={ unn } alt="University of Nigeria Nsukka" />
+                <img src={ tenece } alt="Tenece" />
+                <img src={ estate } alt="Private Estate" />
+                <img src={ genesys } alt="Genesys" />
+            </div>
             
         </div>
     )

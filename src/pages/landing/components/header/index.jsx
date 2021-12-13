@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './nav'
 
 import logo from '../../../../assets/images/logo.png'
 
 const Header = ()=> {
+
+    const [dropMenuIsVisible, setDropMenuIsVisible] = useState(false);
+
+    const showDropMenu = ()=> {
+        setDropMenuIsVisible(true);
+    }
+
     return (
         <header className="header">
             <div className="container main-header macro">
@@ -19,14 +26,15 @@ const Header = ()=> {
                     <span className="logo-mini"><img src={logo} alt="Logo" /></span>
                 </div>
                         
-                <div className="hamburger-menu hamburger-mini mini">
-                    <span style={{"--w": "1"}}></span>
-                    <span style={{"--w": ".75"}}></span>
-                    <span style={{"-w": ".5"}}></span>
+                <div className="hamburger-menu hamburger-mini mini" onClick={showDropMenu}>
+                    <span style={{"--w": 1}}></span>
+                    <span style={{"--w": .75}}></span>
+                    <span style={{"--w": .5}}></span>
                 </div>
             </div>
-
+            <Nav dropMenuIsVisible={dropMenuIsVisible} setDropMenuIsVisible={setDropMenuIsVisible} />
         </div>
+        
             
         </header>
     )
