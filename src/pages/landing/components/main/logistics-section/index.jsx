@@ -16,8 +16,8 @@ const LogisticsSectionComponent = ()=> {
     return (
         <div className="main-component-item logistics-section">
             {/* Design */}
-            <div className="design design-left"></div>
-            <div className="design design-right"></div>
+            {/* <div className="design design-left"></div>
+            <div className="design design-right"></div> */}
 
             <div className="container">
                 <div className="top">

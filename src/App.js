@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './App.css';
 import AuthPage from './pages/authentication';
 import ResetPasswordPage from './pages/authentication/reset-password';

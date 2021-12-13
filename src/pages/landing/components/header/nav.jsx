@@ -16,7 +16,7 @@ const Nav = ({ dropMenuIsVisible,setDropMenuIsVisible })=> {
     return (
         <nav className="nav">
              <div className={dropMenuIsVisible ? "drop-menu-container show-drop-menu-container" : "drop-menu-container"}>
-                <div className={dropMenuIsVisible ? "drop-menu show-drop-menu" : "drop-menu mini"}>
+                <div className={dropMenuIsVisible ? "drop-menu show-drop-menu mini" : "drop-menu mini"}>
                     <div className="main-header">
                         <div className="logo-mini-container">
                             <span className="logo-mini"><img src={logo} alt="Logo" /></span>
@@ -33,12 +33,10 @@ const Nav = ({ dropMenuIsVisible,setDropMenuIsVisible })=> {
                         <Link to="/login" className="btn" >Sign In</Link>
                     </div>
                 </div>
-             </div>{/* Mini menu ends here */}
+             </div>
+             
 
-
-
-
-
+             
             <ul className="macro">
                 <li><a href="#">Features</a></li>
                 <li><a href="#">About</a></li>
