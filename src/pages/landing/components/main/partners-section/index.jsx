@@ -9,10 +9,21 @@ const PartnersSectionComponent = ()=> {
     return (
         <div className="partners-container">
             <div className="container partners">
-                <img src={ unn } alt="University of Nigeria Nsukka" />
-                <img src={ tenece } alt="Tenece" />
-                <img src={ estate } alt="Private Estate" />
-                <img src={ genesys } alt="Genesys" />
+                <div className="partner">
+                    <img src={ unn } alt="University of Nigeria Nsukka" />
+                </div>
+                
+                <div className="partner">
+                    <img src={ tenece } alt="Tenece" />
+                </div>
+
+                <div className="partner">
+                    <img src={ estate } alt="Private Estate" />
+                </div>
+
+                <div className="partner">
+                    <img src={ genesys } alt="Genesys" />
+                </div>
             </div>
             
         </div>
