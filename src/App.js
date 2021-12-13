@@ -7,6 +7,7 @@ import ResetPasswordPage from './pages/authentication/reset-password';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/landing';
 import Dashboard from './pages/dashboard';
+import SignUp from './pages/authentication/sign-up';
 
 const App = ()=> {
   return (
@@ -17,6 +18,7 @@ const App = ()=> {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<AuthPage />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ResetPasswordPage />} />
           <Route path="/dashboard/:user" element={<Dashboard />} />
           
