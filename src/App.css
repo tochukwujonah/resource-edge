@@ -1507,9 +1507,9 @@ footer .social-icons img {
     }
 
     .page > img {
-        height: 41.52748107910156px;
-        width: 300.00048828125px;
-        margin-bottom: 73.17px;
+        width: 200px;
+        height: auto;
+        margin-bottom: 30px;
     }
 
     .box {
