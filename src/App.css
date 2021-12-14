@@ -635,6 +635,7 @@ button {
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 .partners img {
@@ -643,7 +644,6 @@ button {
 
 /* Footer section */
 footer {
-    width: 100vw !important;
     background-color: #091E42;
     height: 224px;
     margin-top: 291.5px;
@@ -819,11 +819,11 @@ footer .social-icons img {
 
 .design {
     position: absolute;
-    width: 4.5em;
-    height: 42em;
-    background-color: #222;
+    width: 143.06px;
+    height: 680.97px;
+    background-color: rgba(109, 184, 255, 0.04);;
     border-radius: 157.5px;
-    z-index: 50;
+    z-index: -1;
     
 }
 
@@ -1444,6 +1444,22 @@ footer .social-icons img {
         justify-content: flex-start;
     }
 
+    .partner:nth-child(1){
+        order: 1;
+    }
+
+    .partner:nth-child(2){
+        order: 3;
+    }
+
+    .partner:nth-child(3){
+        order: 4;
+    }
+
+    .partner:nth-child(4){
+        order: 2;
+    }
+
     .partners {
         margin: -100px auto;
         width: 100%;
@@ -1458,7 +1474,7 @@ footer .social-icons img {
         height: 100% !important;
         width: 50vw !important;
         align-items: center;
-        margin-top: 15px;
+        margin-top: 25px;
     }
 
     .partner:nth-child(odd) img{
@@ -1477,7 +1493,6 @@ footer .social-icons img {
     footer {
         background-color: #091E42;
         height: auto;
-        margin-top: 291.5px;
         color: #fff;
     }
 
