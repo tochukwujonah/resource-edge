@@ -92,9 +92,6 @@ button {
 
 /*Header section */
 
-.top-loader {
-
-}
 
 .header {
     height: 72px;
@@ -1524,9 +1521,6 @@ footer .social-icons img {
        left: 0px;
     }
 
-    .password-field {
-        
-    }
 
 
     form {
