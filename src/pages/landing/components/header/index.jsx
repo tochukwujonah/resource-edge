@@ -12,15 +12,9 @@ const Header = ()=> {
     }
 
     return (
-        <header className="header">
-            <div className="container main-header macro">
-                <span className="logo logo-desk">resource edge</span>
 
-                {/* Navigation component belongs here */}
-                <Nav />
-            </div>
-
-        {/* Header for smaller devices (devices other than a desktop) */}
+        <>
+            {/* Header for smaller devices (devices other than a desktop) */}
         <div className="main-header-mini mini">
             <div className="container main-header">
                 <div className="logo-mini-container">
@@ -36,8 +30,16 @@ const Header = ()=> {
             <Nav dropMenuIsVisible={dropMenuIsVisible} setDropMenuIsVisible={setDropMenuIsVisible} />
         </div>
         
-            
+        <header className="header macro">
+            <div className="container main-header">
+                <span className="logo logo-desk">resource edge</span>
+
+                {/* Navigation component belongs here */}
+                <Nav />
+            </div>  
         </header>
+        
+        </>
     )
 }
 

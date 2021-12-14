@@ -122,7 +122,7 @@ const ChildComponent = ({ user, setUser })=> {
                         </div>
 
 
-                        <div className={progress === 1 ? "form-item initial-comein" :  progress === -1 ? "form-item forward": "form-item"} style={{"--fromX":"0%", "--toX": "100%", "--opacity": "0", "--opacityFrom": "1", "--opacityTo": "0"}}>
+                        <div className={progress === 1 ? "password-field form-item initial-comein" :  progress === -1 ? "password-field form-item forward": "password-field form-item"} style={{"--fromX":"0%", "--toX": "100%", "--opacity": "0", "--opacityFrom": "1", "--opacityTo": "0"}}>
                             <label>Password</label>
                             <div className="form-group-item">
                                 <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={user.password} onInput={validateInput}/>
