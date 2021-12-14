@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import Page from '../Page'
 import { useNavigate } from 'react-router-dom'
 
+import show from '../../assets/icons/show.png';
+import hide from '../../assets/icons/hide.png';
+
+
 const SignUp = ()=> {
     return <Page ChildComponent={ChildComponent} title="SignUp" caption="Sign up today to get started" link="Login if already signed up" path="/login" />
 }
@@ -9,6 +13,8 @@ const SignUp = ()=> {
 
 
 const ChildComponent = ()=> {
+
+    const [showPassword, setShowpassword] = useState(false);
 
     const navigate = useNavigate();
     const [user, setUser] = useState({
@@ -43,6 +49,12 @@ const ChildComponent = ()=> {
         navigate("/login");
     }
 
+
+       //Toggle password anonimity
+       const togglePassword = ()=> setShowpassword(!showPassword);
+
+
+
     return (
         <>
         <span>Sign up today to get started</span>
@@ -64,7 +76,8 @@ const ChildComponent = ()=> {
             <div className="form-item">
                 <label>Password</label>
                 <div className="form-group-item">
-                    <input type="password" placeholder="Enter your choice password" name="password" onChange={onInputChange} value={user.password} />
+                    <input type={!showPassword ? "password" : "text"} placeholder="Enter your choice password" name="password" onChange={onInputChange} value={user.password} />
+                    <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
                 </div>
             </div>
 
