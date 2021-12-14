@@ -108,7 +108,7 @@ button {
 }
 
 .main-header-mini {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100vw;
@@ -641,6 +641,7 @@ button {
 
 /* Footer section */
 footer {
+    width: 100vw !important;
     background-color: #091E42;
     height: 224px;
     margin-top: 291.5px;
@@ -1338,6 +1339,12 @@ footer .social-icons img {
 /* Media query */
 @media screen and (min-width: 278px) and (max-width: 599px) {
 
+
+    /* Navbar */
+    .main-header-mini {
+        position: fixed;
+    }
+
     /* Show case section */
     .showcase-container {
         margin-top: 20px;
@@ -1350,7 +1357,7 @@ footer .social-icons img {
 
     .top .caption h1 {
         font-size: 24px;
-        width: 80%;
+        width: 100% !important;
     }
     .caption small {
         max-width: 80%;

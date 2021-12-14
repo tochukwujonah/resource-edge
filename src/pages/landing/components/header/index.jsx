@@ -20,6 +20,7 @@ const Header = ()=> {
                 <Nav />
             </div>
 
+        {/* Header for smaller devices (devices other than a desktop) */}
         <div className="main-header-mini mini">
             <div className="container main-header">
                 <div className="logo-mini-container">
