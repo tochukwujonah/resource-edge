@@ -24,11 +24,7 @@ const FinanceSectionComponent = ()=> {
 
     return (
         <div className="main-component-item finance-section">
-            {/* Design */}
-            {/* <div className="design design-left finance-design-left"></div>
-            <div className="design design-right finance-design-right"></div> */}
-
-
+            
             <div className="container">
             <div className="top">
                     <Caption title="Finance" body="Generate invoices, track expenditure, and manage complex payrolls for multiple teams and companies"/>

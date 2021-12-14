@@ -12,6 +12,17 @@ import SignUp from './pages/authentication/sign-up';
 const App = ()=> {
   return (
     <div className="App">
+            {/* Designs */}
+
+
+            {/* Logistics section bar designs */}
+            {/* <div className="design design-left"></div>
+            <div className="design design-right"></div> */}
+
+
+            {/* Finance section bar designs bar */}
+            {/* <div className="design design-left finance-design-left"></div>
+            <div className="design design-right finance-design-right"></div> */}
 
       <Router>
 

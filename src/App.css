@@ -821,9 +821,9 @@ footer .social-icons img {
     position: absolute;
     width: 4.5em;
     height: 42em;
-    background-color: rgba(109, 184, 255, 0.04);
+    background-color: #222;
     border-radius: 157.5px;
-    z-index: -1;
+    z-index: 50;
     
 }
 
@@ -1397,7 +1397,7 @@ footer .social-icons img {
 
     .svg {
         margin-top: 23px;
-        width: 120%;
+        width: 100%;
         height: auto;
     }
 
