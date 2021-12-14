@@ -38,7 +38,7 @@ const FinanceSectionComponent = ()=> {
 
                     <Card icon={ pay } color="#008DA6" title="Payroll" body="Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes.
                     " hasShadow={ false } />
-                </div>
+             </div>
 
                 <IframeComponent title="Payroll" IframeBody={ financeIframe } />
 

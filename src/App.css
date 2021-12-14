@@ -552,6 +552,11 @@ button {
 }
 
 /* finance section */
+
+.finance-section{
+    margin-top: -150px;
+}
+
 .employees-table {
     border: 0.8px solid #DDDDDD;
 }
@@ -814,8 +819,8 @@ footer .social-icons img {
 
 .design {
     position: absolute;
-    width: 143.06px;
-    height: 680.97px;
+    width: 4.5em;
+    height: 42em;
     background-color: rgba(109, 184, 255, 0.04);
     border-radius: 157.5px;
     z-index: -1;
@@ -1376,6 +1381,14 @@ footer .social-icons img {
         margin-right: auto !important;
         margin-bottom: -50px !important;
     }
+
+    .finance-section{
+        margin-top: -200px;
+    }
+
+    .logistics-section {
+        margin-top: 20px;
+    }
     
     .main-component-item .top {
         flex-direction: column;
@@ -1429,14 +1442,19 @@ footer .social-icons img {
 
     .partners {
         margin: -100px auto;
-        width: 80%;
+        width: 100%;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         
     }
 
 
     .partners img {
-        height: 40px;
+        height: 100% !important;
+        width: 50vw !important;
+        align-items: center;
+        margin-top: 15px;
     }
 
     .partner:nth-child(odd) img{
@@ -1492,6 +1510,8 @@ footer .social-icons img {
         display: block;
     }
 
+    
+
 
     /* Page style */
     .page-illustration img {
@@ -1539,11 +1559,15 @@ footer .social-icons img {
     }
 
     .form-group-item input[type=email] {
-        width: 85%;
+        width: 90%;
+    }
+
+    .sign-up-form .form-group-item input[type=text] {
+        width: 90%;
     }
 
     .form-group-item input[type=password] {
-        width: 85%;
+        width: 90%;
     }
 
     

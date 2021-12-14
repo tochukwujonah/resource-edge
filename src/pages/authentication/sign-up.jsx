@@ -58,7 +58,7 @@ const ChildComponent = ()=> {
     return (
         <>
         <span>Sign up today to get started</span>
-        <form className="form-control" onSubmit={onSignup}>
+        <form className="form-control sign-up-form" onSubmit={onSignup}>
             <div className="form-item">
                 <label>Fullname</label>
                 <div className="form-group-item">
