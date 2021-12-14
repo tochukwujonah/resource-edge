@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import pencil from '../../assets/icons/pencil.png';
 import show from '../../assets/icons/show.png';
 import hide from '../../assets/icons/hide.png';
+import check from '../../assets/icons/check.png';
 import Page from '../Page';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,20 +25,34 @@ const ChildComponent = ({ user, setUser })=> {
     const [progress, setProgress] = useState(0); //Monitors progress, 1 is forward, -1 is backward 
     const [showPassword, setShowpassword] = useState(false);
 
+    //Validate email and password on value change
     const validateInput = (e)=> {
         if(e.target.type === 'email'){
             setUser({...user, email: e.target.value});
             const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+))$/;
             
-            if(regex.test(user.email)) setIsValid(true);
+            if(regex.test(user.email || e.target.value)) setIsValid(true);
             else setIsValid(false);
+
+            //Check if input is empty
+            if(e.target.value === '') setIsValid(false);
             
         } else {
 
+            //Check if password is upto 6 characters
+            if(e.target.value.length < 6) setIsValid(false);
+            else setIsValid(true);
+
+            //Update user state password value with input value
             setUser({...user, password: e.target.value});
         }     
         
     }
+
+    //Validate email and password on Input
+    // const inputHandler = (e) => {
+
+    // }
 
 
     const nextStep = (e)=> {
@@ -101,7 +116,8 @@ const ChildComponent = ({ user, setUser })=> {
                         <div className={progress === 0 ? "form-item initial-comein" : progress === 1  ? "form-item backward" :  "form-item forward"} style={{"--fromX":"-100%", "--toX": "0%", "--opacityFrom": "0", "--opacityTo": "1"}}>
                             <label>Email Address</label>
                             <div className="form-group-item">
-                                <input type="email" placeholder="Enter email" value={user.email} onChange={validateInput} autoFocus autoCorrect={true}/>
+                                <input type="email" placeholder="Enter email" value={user.email} onInput={validateInput} />
+                                { isValid ? <img src={check} alt="Check icon "/> : null }
                             </div>
                         </div>
 
@@ -109,7 +125,7 @@ const ChildComponent = ({ user, setUser })=> {
                         <div className={progress === 1 ? "form-item initial-comein" :  progress === -1 ? "form-item forward": "form-item"} style={{"--fromX":"0%", "--toX": "100%", "--opacity": "0", "--opacityFrom": "1", "--opacityTo": "0"}}>
                             <label>Password</label>
                             <div className="form-group-item">
-                                <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={user.password} onChange={validateInput}/>
+                                <input type={!showPassword ? "password" : "text"} placeholder="Enter password" value={user.password} onInput={validateInput}/>
                                 <img src={!showPassword ? show : hide} alt="Show password" onClick={togglePassword} />
                             </div>
                         </div>
