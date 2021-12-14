@@ -1362,6 +1362,10 @@ footer .social-icons img {
         grid-template-columns: 1fr;
     }
 
+    .card {
+        margin: 20px 0;
+    }
+
     .iframe {
         transform: scale(.32);
         margin-top: -50px !important;
@@ -1503,9 +1507,9 @@ footer .social-icons img {
         box-shadow: none;
     }
 
-    .form-item {
+    /* .form-item {
         
-    }
+    } */
 
 
     form {
