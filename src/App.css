@@ -33,8 +33,9 @@ hr {
 }
 
 .svg {
-    width: 500px;
+    width: 550px;
     height: auto;
+    margin-top: -70px;
 }
 
 ul {
@@ -79,6 +80,11 @@ a {
     color: #fff;
     border-radius: 4px;
     border: none;
+}
+
+.btn:hover{
+    transition: 0.6s ease-in;
+    transform: scale(1.05);
 }
 
 button {
@@ -198,6 +204,11 @@ button {
     box-shadow: -28px 46px 60px rgba(9, 30, 66, 0.08);
     transform-origin: left;
     margin: 112px;
+}
+
+.iframe:hover{
+    transition: 0.3s ease-in;
+    transform: scale(1.05);
 }
 
 .iframe header {
@@ -1386,7 +1397,7 @@ footer .social-icons img {
     }
 
     .finance-section{
-        margin-top: -200px;
+        margin-top: -100px;
     }
 
     .logistics-section {
@@ -1669,6 +1680,11 @@ footer .social-icons img {
         height: 224px;
         margin-top: 170px;
         color: #fff;
+    }
+
+    .social-icons {
+        width: auto;
+        margin: 10px 0;
     }
     
 }
