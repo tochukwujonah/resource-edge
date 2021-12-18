@@ -208,7 +208,7 @@ button {
 
 .iframe:hover{
     transition: 0.3s ease-in;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .iframe header {
@@ -1701,4 +1701,5 @@ footer .social-icons img {
         margin-right: auto !important;
         margin-left: auto !important;
     }
+    
 }
